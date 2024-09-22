@@ -69,16 +69,12 @@ html {
   cursor: pointer;
 }
 
-.sidebar nav ul {
+.lista-navbar {
   list-style-type: none;
   padding: 0;
 }
 
-.sidebar nav ul li {
-  margin: 20px 0;
-}
-
-.sidebar nav ul li a {
+.text-lista {
   font-family: "Outfit", sans-serif;
   font-optical-sizing: auto;
   color: white;
@@ -86,10 +82,25 @@ html {
   font-size: 20px;
 }
 
-.sidebar nav ul li a:hover {
+.li-sidebar:hover {
   text-decoration: underline;
 }
 
+.nav-sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: space-between;
+
+}
+
+.div-user {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Outfit", sans-serif;
+  margin-top: 500px;
+}
 
 .App-content {
   margin-top: 80px;
@@ -101,7 +112,15 @@ html {
 }
 
 .li-sidebar {
-  padding-left: 16px;
+  /* padding-left: 16px; */
+  margin: 20px 0;
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
 }
 
 

@@ -22,17 +22,17 @@ function App() {
 
       <aside className={`sidebar ${isSidebarOpen ? 'open' : ''}`}>
         <button className="close-btn" onClick={toggleSidebar}>×</button>
-        <nav>
+        <nav className='nav-sidebar'>
           <div>
-            <ul>
-              <li className='li-sidebar'><a href="#seccion1">Home</a></li>
-              <li className='li-sidebar'><a href="#seccion2">My Stories</a></li>
-              <li className='li-sidebar'><a href="#seccion3">Settings</a></li>
-              <li className='li-sidebar'><a href="#seccion3">My Proyects</a></li>
+            <ul className='lista-navbar'>
+              <li className='li-sidebar'><a href="#seccion1" className='text-lista'>Home</a></li>
+              <li className='li-sidebar'><a href="#seccion2" className='text-lista'>My Stories</a></li>
+              <li className='li-sidebar'><a href="#seccion3" className='text-lista'>Settings</a></li>
+              <li className='li-sidebar'><a href="#seccion3" className='text-lista'>My Proyects</a></li>
             </ul>
           </div>
-          <div>
-            <li className='li-sidebar'><a href="#seccion3">User Profile Link</a></li>
+          <div className='div-user'>
+            <li className='lista-navbar'><a href="#seccion3" className='li-sidebar'>User Profile Link</a></li>
           </div>
         </nav>
       </aside>
