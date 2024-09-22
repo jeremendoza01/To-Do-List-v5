@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+
+.App {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+
+.App-header {
+  background-color: #282c34;
+  padding: 20px;
+  display: flex;
+  color: white;
+  text-align: left;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.div-header {
+  display: flex;
+  align-items: center;
+
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px;
+
+  width: 250px;
+  height: 100%;
+  background-color: #333;
+  color: white;
+  transition: left 0.3s ease;
+  padding-top: 60px;
+
+  z-index: 200;
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
+
+.sidebar nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar nav ul li {
+  margin: 20px 0;
+}
+
+.sidebar nav ul li a {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.sidebar nav ul li a:hover {
+  text-decoration: underline;
+}
+
+
+.App-content {
+  margin-top: 80px;
+  /* Da espacio para el header */
+  padding: 20px;
+  overflow-y: auto;
+  height: 100%;
+  /* background-color: #f0f0f0; */
+}
+
+.li-sidebar {
+  padding-left: 16px;
+}
+
+
+section {
+  margin-bottom: 40px;
+}
+
+h2 {
+  margin-bottom: 10px;
+}
+
+p {
+  line-height: 1.6;
+}
+
+.icon-navbar {
+  font-size: 32px;
+}
+
+.logo-navbar {
+  font-size: 24px;
+  padding-left: 8px;
+  font-family: "Outfit", sans-serif;
+}
+
+
+@media (max-width: 768px) {
+  .App-header {
+    padding: 15px;
+  }
+
+  .App-content {
+    padding: 15px;
+  }
+}
