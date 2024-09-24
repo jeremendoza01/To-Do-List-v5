@@ -37,14 +37,16 @@ function App() {
       </header>
 
       <aside className={`sidebar ${isSidebarOpen ? 'open' : ''}`}>
+        <div className='div-logo-sidebar'><h1>VIEW NAME</h1></div>
         <button className="close-btn" onClick={toggleSidebar}>×</button>
+
         <nav className='nav-sidebar'>
           <div>
             <ul className='lista-navbar'>
               <li className='li-sidebar'><a href="#seccion1" className='text-lista'>Home</a></li>
+              <li className='li-sidebar'><a href="#seccion3" className='text-lista'>My Proyects</a></li>
               <li className='li-sidebar'><a href="#seccion2" className='text-lista'>My Stories</a></li>
               <li className='li-sidebar'><a href="#seccion3" className='text-lista'>Settings</a></li>
-              <li className='li-sidebar'><a href="#seccion3" className='text-lista'>My Proyects</a></li>
             </ul>
           </div>
           <div className='div-user'>
