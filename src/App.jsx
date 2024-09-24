@@ -3,12 +3,28 @@ import './App.css';
 import { HiMenu } from "react-icons/hi";
 import { useState } from 'react';
 
+
 function App() {
 
   const [isSidebarOpen, setisSidebarOpen] = useState(false)
   const toggleSidebar = () => {
     setisSidebarOpen(!isSidebarOpen)
   }
+
+  // const [users, setusers] = useState([])
+
+  // const fetchUsers = async () => {
+  //   try {
+  //     const response = await fetch("https://jsonplaceholder.typicode.com/users")
+  //     const data = await response.json()
+  //     setusers(data)
+  //   } catch (error) {
+  //     console.log(error)
+  //   }
+  // }
+  // const handleFetch = () => {
+  //   fetchUsers()
+  // }
 
 
   return (
@@ -39,8 +55,13 @@ function App() {
 
       <main className="App-content">
         <section>
-          <h2>Sección 1</h2>
-          <p>Este es el contenido de la sección 1. Haz scroll para ver más contenido.</p>
+          {/* <button onClick={handleFetch}>Click para llamar a la API</button>
+          {users.map(user => <li key={user.id}>Nombre: {user.name} - City: {user.street}</li>)}
+          */}
+          <div>
+            <h2>Sección 1</h2>
+            <p>Este es el contenido de la sección 1. Haz scroll para ver más contenido.</p>
+          </div>
         </section>
         <section>
           <h2>Sección 2</h2>
