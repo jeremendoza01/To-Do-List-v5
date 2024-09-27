@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    color: white;
+    transition: left 0.3s ease;
+    z-index: 200;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.sidebar.open {
+    left: 0;
+
+}
+
+.div-logo-sidebar {
+    /* width: 100%; */
+    /* height: 64px; */
+    height: 70px;
+    /* padding-top: 16px; */
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding-left: 24px;
+    background-color: #444444;
+    /* background-color: ; */
+    /* border-radius: 0px 0px 12px 12px; */
+}
+
+
+
+.close-btn {
+    position: absolute;
+    right: 20px;
+    /* top: 17px; */
+    background: none;
+    border: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: #375ca5;
+    transition: all 0.15s ease;
+}
+
+.lista-navbar {
+    list-style-type: none;
+    /* align-items: center; */
+    padding-left: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* padding: 0; */
+}
+
+.text-lista {
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    color: white;
+    list-style: none;
+    display: block;
+    text-decoration: none;
+    font-size: 1.2em;
+    margin: 0.7em 0;
+    /* background-color: #e0e0e0; */
+    transition: background-color 0.3s;
+}
+
+.text-lista:hover {
+    /* border-bottom: 2px #375ca5 solid; */
+    color: #375ca5;
+    transition: all 0.15s linear;
+}
+
+.li-sidebar:hover {
+    text-decoration: underline;
+}
+
+.nav-sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    /* align-items: start; */
+    /* position: fixed; */
+    /* align-items: center; */
+    /* margin-top: 16px; */
+    flex-grow: 1;
+    padding: 2em 1em;
+
+
+    /* justify-content: space-between; */
+
+}
+
+
+.App-header {
+    text-align: center;
+    background-color: #282c34;
+    padding: 20px;
+    height: 30px;
+    display: flex;
+    color: white;
+    /* text-align: left; */
+    position: fixed;
+    justify-content: space-between;
+
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.div-header {
+    text-align: center;
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.div-user {
+    display: flex;
+    height: 70px;
+    justify-content: center;
+    align-items: center;
+    font-family: "Outfit", sans-serif;
+    background-color: #444444;
+    /* padding-bottom: 30px; */
+
+    /* margin-top: 480px; */
+}
+
+.li-sidebar {
+    /* padding-left: 16px; */
+    margin: 20px 0;
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+
+.icon-navbar {
+    font-size: 32px;
+    cursor: pointer;
+}
+
+.icon-navbar:hover {
+    color: #375ca5;
+    transition: all 0.15s ease;
+}
+
+.logo-navbar {
+    font-size: 26px;
+    padding-right: 32px;
+    flex-grow: 1;
+    margin: 10px;
+    text-align: center;
+    font-family: "Outfit", sans-serif;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-family: "Outfit", sans-serif;
+    font-size: 1.5em;
+}
+
+p {
+    line-height: 1.6;
+}
