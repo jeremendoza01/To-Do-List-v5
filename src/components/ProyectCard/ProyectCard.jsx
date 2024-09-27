@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-// import styles from './projectCard.module.css'
+import "./styles.css"
 
 const ProyectCard = ({ project }) => {
     return (

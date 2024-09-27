@@ -1,5 +1,5 @@
 import Navbar from "../components/Navbar/Navbar"
-import "../pages/styles/styles.css"
+// import "./styles/"
 
 function Settings() {
 

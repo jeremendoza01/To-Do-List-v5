@@ -3,7 +3,7 @@ import { ProjectContext } from "../context/ProjectContext"
 
 import ProjectCard from "../components/ProyectCard/ProyectCard";
 import Navbar from "../components/Navbar/Navbar"
-import "../pages/styles/styles.css"
+import "./styles/styles-MyProjects.css"
 
 
 
@@ -19,7 +19,7 @@ export const MyProjects = () => {
                 <h2>Mis Proyectos</h2>
                 <div>
                     {loading ? (
-                        <h3>cargando proyectos</h3>
+                        <p>Cargando proyectos..</p>
                     ) : (
                         projectsData.map((project) => (
                             <ProjectCard key={project._id} project={project} />

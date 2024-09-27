@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-
+import "./styles-EpicCard.css"
 export const EpicCard = ({ epic }) => {
 
     return (
@@ -7,9 +7,9 @@ export const EpicCard = ({ epic }) => {
             to={`/my-projects/${epic.project}/${epic._id}`}
             className='epic-link'>
             <div className='card-epic'>
-                <h2 className="name-epic">Nombre de epica: {epic.name}</h2>
+                <h2 className="name-epic">{epic.name}</h2>
                 <p className="description-epic">
-                    Descripcion: {epic.description}
+                    {epic.description}
                 </p>
                 <p className="icon-epic">Icono: {epic.icon}</p>
             </div>

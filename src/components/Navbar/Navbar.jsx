@@ -23,7 +23,7 @@ function Navbar() {
             </header>
             <div className={`sidebar ${isSidebarOpen ? 'open' : ''}`}>
                 <div className='div-logo-sidebar'>
-                    <h1>VIEW NAME</h1>
+                    <h1 className="logo-navbar">VIEW NAME</h1>
                     <HiOutlineX className='close-btn' onClick={toggleSidebar} />
                 </div>
                 <nav className='nav-sidebar'>
@@ -38,7 +38,7 @@ function Navbar() {
                 <div className='div-user'>
                     <Link to={"/settings"} className='text-lista' >Settings</Link>
                 </div>
-            </div>
+            </div >
         </>
 
     );
