@@ -2,6 +2,11 @@ import { Link } from 'react-router-dom'
 import "./styles.css"
 
 const ProyectCard = ({ project }) => {
+
+    if (!project) {
+        return null;
+    }
+
     return (
         <>
             <div>

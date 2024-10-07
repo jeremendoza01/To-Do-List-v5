@@ -1,6 +1,5 @@
 
 import './App.css';
-// import Layout from './Layout/Layout';
 
 
 function App() {
@@ -23,7 +22,6 @@ function App() {
   return (
     <>
       <div></div>
-      {/* <Layout /> */}
     </>
   );
 
