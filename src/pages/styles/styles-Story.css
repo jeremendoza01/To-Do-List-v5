@@ -128,3 +128,16 @@ ul li {
     /* transform: scale(1.05); */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
+
+.div-property {
+    text-align: center;
+}
+
+.div-data-story {
+    text-align: center;
+
+}
+
+.div-users {
+    text-align: center;
+}

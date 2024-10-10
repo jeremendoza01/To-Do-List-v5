@@ -2,46 +2,52 @@ import { useState, useEffect } from "react";
 
 export const useFetchEpics = (projectId) => {
 
-    const getEpicsById = async (projectId) => {
+    const getEpics = async (projectId) => {
+        const url = `https://lamansysfaketaskmanagerapi.onrender.com/api/projects/${projectId}/epics`;
 
-        const url = `https://lamansysfaketaskmanagerapi.onrender.com/api/projects/${projectId}/epics`
-
-        const response = await fetch(url, {
-            method: 'GET',
+        const resp = await fetch(url, {
             headers: {
                 'Content-Type': 'application/json',
-                auth: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Im5hbWUiOnsiZmlyc3QiOiJXYWx0ZXIiLCJsYXN0IjoiTW9saW5hIn0sIl9pZCI6IjYyMDE0Y2RhNGM2NGEzNGNjODg4MWJmZCIsImVtYWlsIjoid2FsdGVybW9saW5hQG1zbi5jb20iLCJ1c2VybmFtZSI6IndhbHRlcm1vbGluYSIsIl9fdiI6MH0sImlhdCI6MTcyODMxNjAxNiwiZXhwIjoxNzI4NDAyNDE2fQ.o9-ROZVdGe5_GZoaD62uVWVEibjQEuXdzOGM8XuLvXE',
+                auth: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Im5hbWUiOnsiZmlyc3QiOiJXYWx0ZXIiLCJsYXN0IjoiTW9saW5hIn0sIl9pZCI6IjYyMDE0Y2RhNGM2NGEzNGNjODg4MWJmZCIsImVtYWlsIjoid2FsdGVybW9saW5hQG1zbi5jb20iLCJ1c2VybmFtZSI6IndhbHRlcm1vbGluYSIsIl9fdiI6MH0sImlhdCI6MTcyODUyNTQ2NiwiZXhwIjoxNzI4NjExODY2fQ.31XEHC0k0hL3XZbzhpZc4ckCsTlKcarDZsQxnXwYkMs",
             }
         });
 
-        if (!response.ok) {
-            throw new Error(`Error: ${response.status}`);
+        if (!resp.ok) {
+            throw new Error(`Error: ${resp.status}`);
         }
 
-        const { data } = await response.json();
-
+        const { data } = await resp.json();
         return data;
-    }
+    };
 
     const [state, setState] = useState({
-        data: null,
+        data: [],
         loading: true
-    })
+    });
+
     useEffect(() => {
-        getEpicsById(projectId)
-            .then(project => {
-                setState({
-                    data: project,
-                    loading: false
+        if (projectId) {
+            getEpics(projectId)
+                .then(epics => {
+                    setState({
+                        data: epics,
+                        loading: false
+                    });
                 })
-            })
-            .catch(() => {
-                setState({
-                    data: null,
-                    loading: false
-                })
-            })
-    }, [])
+                .catch((err) => {
+                    console.log(err);
+                    setState({
+                        data: [],
+                        loading: false
+                    });
+                });
+        } else {
+            setState({
+                data: [],
+                loading: false
+            });
+        }
+    }, [projectId]); // Agregado projectId como dependencia
 
     return state;
-}
+};

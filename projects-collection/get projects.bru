@@ -1,17 +1,13 @@
 meta {
   name: get projects
   type: http
-  seq: 2
+  seq: 1
 }
 
-get {
-  url: https://lamansysfaketaskmanagerapi.onrender.com/api/projects
+post {
+  url: https://lamansysfaketaskmanagerapi.onrender.com/api/login
   body: json
   auth: none
-}
-
-headers {
-  auth: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Im5hbWUiOnsiZmlyc3QiOiJXYWx0ZXIiLCJsYXN0IjoiTW9saW5hIn0sIl9pZCI6IjYyMDE0Y2RhNGM2NGEzNGNjODg4MWJmZCIsImVtYWlsIjoid2FsdGVybW9saW5hQG1zbi5jb20iLCJ1c2VybmFtZSI6IndhbHRlcm1vbGluYSIsIl9fdiI6MH0sImlhdCI6MTcyNzgwOTQ5MCwiZXhwIjoxNzI3ODk1ODkwfQ.2EMTc2OA8Ge8Jq4hGQPTTZ3CzQ3xzK3iaXgorq6x1e0
 }
 
 body:json {

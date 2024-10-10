@@ -93,3 +93,15 @@ h3 {
 .container-project {
     margin-top: 7em;
 }
+
+.div-property {
+    text-align: center;
+}
+
+.project-members {
+    text-align: center;
+}
+
+.project-epics {
+    text-align: center;
+}
