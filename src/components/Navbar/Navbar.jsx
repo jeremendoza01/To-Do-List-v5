@@ -19,6 +19,7 @@ function Navbar() {
                 <div className="div-header">
                     <HiMenu className='icon-navbar' onClick={toggleSidebar} />
                     <h1 className='logo-navbar'>VIEW NAME</h1>
+                    <Link to={"/login"} className='text-login'>Login</Link>
                 </div>
             </header>
             <div className={`sidebar ${isSidebarOpen ? 'open' : ''}`}>

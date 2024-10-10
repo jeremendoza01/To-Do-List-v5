@@ -4,6 +4,7 @@ import Home from "../pages/Home"
 import { Epic } from "../pages/Epic"
 import { MyProjects } from "../pages/MyProjects"
 import { Story } from "../pages/Story"
+import Login from "../components/Login/Login"
 import { MyStories } from "../pages/MyStories"
 import ProjectDetails from "../pages/ProjectDetails"
 import Settings from "../pages/Settings"
@@ -17,6 +18,10 @@ const router = createBrowserRouter([{
 {
     path: "/home",
     element: <Home />
+},
+{
+    path: "/login",
+    element: <Login />
 },
 {
     path: "my-projects",

@@ -188,3 +188,17 @@ h1 {
 p {
     line-height: 1.6;
 }
+
+.text-login {
+    position: relative;
+    right: 5%;
+    align-items: center;
+    font-size: 1em;
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.text-login:hover {
+    transition: all 0.15s ease-in-out;
+    color: #375ca5;
+}
