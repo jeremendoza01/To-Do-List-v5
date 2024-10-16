@@ -1,13 +1,25 @@
 import Navbar from "../components/Navbar/Navbar"
-// import "../pages/styles/styles.css"
+import "../pages/styles/styles-MyStories.css"
+import { StoryCard } from "../components/StoryCard/StoryCard"
+import { hookStories } from "../hooks/hookStories"
+import { useAuth } from "../auth/AuthProvider"
 
 export const MyStories = () => {
+
+    const { user } = useAuth()
+
+    const { data: storiesData, loading: loadingStories } = hookStories();
+
+    const stories = storiesData.filter((story) => story.owner === user._id)
+
     return (
         <>
             <Navbar />
-            <div className="container">
-                <h1>My Stories</h1>
-                <h2>Esta pagina esta en desarrollo</h2>
+            <div className="div-historias">
+                <h1>Mis historias</h1>
+                {loadingStories ? <p>Cargando historias...</p> :
+                    stories.map(story => <StoryCard key={story._id} story={story} />)
+                }
             </div>
         </>
     )

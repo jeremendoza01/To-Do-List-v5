@@ -1,158 +1,107 @@
-/* Estilos generales */
+/* Global Styles */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f9f9f9;
-    margin: 0;
-    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8f9fa;
     color: #333;
 }
 
+/* Container for Story details */
 .container {
-    margin-top: 7em;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* Contenedor principal */
-.container-story {
-    /* max-width: 1200px; */
-    /* margin: 0 auto; */
-    /* padding: 20px; */
-    margin-top: 7em;
+/* Story details */
+.story-details {
+    margin-bottom: 40px;
 }
 
-/* Título principal */
-h1 {
-    text-align: center;
-    /* font-size: 2rem; */
-    color: #444;
+h1,
+h2,
+h3 {
+    color: #17a2b8;
+}
+
+.story-name {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.story-description {
+    font-size: 1.1rem;
+    color: #6c757d;
     margin-bottom: 20px;
 }
 
-/* Título de la historia */
-h2 {
-    /* font-size: 2rem; */
-    color: #555;
+.div-property,
+.div-data-story,
+.div-users,
+.div-historias {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f1f1f1;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.div-property p,
+.div-data-story p,
+.div-users p {
+    margin: 5px 0;
+}
+
+.div-property span {
+    font-weight: bold;
+    color: #495057;
+}
+
+.story-owner-name {
+    color: #007bff;
+}
+
+.div-data-story span {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.div-users ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.div-users ul li {
+    padding: 5px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.h3-historia {
+    font-size: 1.5rem;
     margin-bottom: 10px;
 }
 
-/* Descripción de la historia */
-p {
-    padding: 5px 15px;
-    /* font-size: 1.7rem; */
-    text-decoration: none;
-
-    /* line-height: 1.6; */
-    color: #666;
-    margin-bottom: 20px;
-}
-
-/* Contenedor de tareas */
-.task-container {
-    background-color: #fff;
-    /* border-radius: 8px; */
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
-}
-
-/* Título de la sección de tareas */
-h3 {
-    font-size: 1.7rem;
-    color: #444;
-    margin-bottom: 15px;
-}
-
-/* Lista de tareas */
-ul {
+/* Task list */
+.task-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
     list-style-type: none;
     padding: 0;
 }
 
-ul li {
-    margin-bottom: 15px;
-}
-
-/* Tarjeta de tarea */
-.task-card {
-    background-color: #f9f9f9;
-    /* border-radius: 8px; */
-    width: 45em;
-    padding: 15px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.15s;
-}
-
-.task-card:hover {
-    transform: translateY(-4px)
-}
-
-/* Mensaje de carga */
-.loading-message {
-    text-align: center;
-    font-size: 1.2rem;
-    color: #888;
-    margin-top: 20px;
-}
-
-/* Mensaje de error */
-.error-message {
-    text-align: center;
-    color: red;
-    font-size: 1.5rem;
-    margin-top: 20px;
-}
-
-.description-epic {
-    /* font-size: 1em; */
-    text-decoration: none;
-
-}
-
-.name-epic {
-    text-decoration: none;
-}
-
-/* Estilos para la tarjeta épica */
-.card-epic {
-    background-color: #fff;
-    border-radius: 24px;
-    margin-bottom: 24px;
+.task-list li {
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
     padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
+    background-color: #fff;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-/* Quitar el subrayado a los enlaces dentro de card-epic */
-.card-epic a {
-    text-decoration: none;
-    color: inherit;
-    /* Mantener el color del enlace igual al texto de la tarjeta */
-}
-
-/* Opcional: Efecto hover */
-.card-epic:hover {
-    /* transform: scale(1.05); */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-}
-
-.div-property {
-    text-align: center;
-}
-
-.div-data-story {
-    text-align: center;
-
-}
-
-.div-users {
-    text-align: center;
-}
-
-.div-historias {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.h3-historias {
-    text-align: center;
+.task-list li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }

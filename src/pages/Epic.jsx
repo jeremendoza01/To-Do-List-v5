@@ -18,24 +18,26 @@ export const Epic = () => {
                     <h1>Detalles de la epica</h1>
                     {loadingEpics && <p>Cargando detalles de la epica</p>}
                     {epic && (
-                        <>
+                        <div className="div-name-epic">
                             <h2>{epic.name} {epic.icon}</h2>
-                            <p>descripcion: {epic.description}</p>
-                        </>
+                            <p>Descripcion: {epic.description}</p>
+                        </div>
                     )}
                 </div>
-
-                <div className="div-historias">
+                <div className="div-stories">
                     <h3 className="h3-historias">Historias:</h3>
-                    {loadingStories ? <p>Cargando historias...</p> :
+                    {loadingStories ? (
+                        <p>Cargando historias...</p>
+                    ) : (
                         <ul className="link-story">
-                            {storiesData.map(story =>
+                            {storiesData.map(story => (
                                 <StoryCard key={story._id} story={story} epicId={epicId} projectId={projectId} />
-                            )}
+                            ))}
                         </ul>
-                    }
+                    )}
                 </div>
             </div>
+
         </>
     );
 };

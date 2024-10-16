@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { API_URL } from "../api"
-export const useFetchStories = () => {
+export const hookStories = () => {
 
     const getStories = async () => {
         const url = `${API_URL}/stories`

@@ -1,6 +1,6 @@
 // import React from "react";
 import { Link } from "react-router-dom";
-
+import "./styles-StoryCard.css"
 
 export const StoryCard = ({ story, projectId, epicId }) => {
     return (

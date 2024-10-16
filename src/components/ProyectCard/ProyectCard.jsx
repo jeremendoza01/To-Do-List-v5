@@ -9,7 +9,7 @@ const ProyectCard = ({ project }) => {
 
     return (
         <>
-            <div className='div-projects'>
+            <div className='div-projects-card'>
                 <Link to={`/my-projects/${project._id}`} className='link-project'>
                     <div className='card-project'>
                         <h2>{project.name}</h2>

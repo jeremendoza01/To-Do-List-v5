@@ -1,125 +1,80 @@
-/* Estilos generales */
+/* Global Styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
-    margin: 0;
-    padding: 0;
     color: #333;
+    background-color: #f8f9fa;
 }
 
+/* Container for Epic details and stories */
 .container-epic {
-    margin-top: 7em;
-}
-
-/* Contenedor de detalles de la épica */
-.epic-details {
+    margin-top: 4em;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
     background-color: #fff;
-    /* border-radius: 8px; */
-    /* padding: 20px; */
-    /* margin: 20px auto; */
-    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
-    /* max-width: 800px; */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Título principal */
-h1 {
-    /* font-size: 2rem; */
-    /* text-align: center; */
-    /* color: #444; */
+/* Epic details */
+.div-epic {
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 15px;
+    /* background-color: #e9ecef; */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.div-name-epic h2 {
+    margin-top: 0;
+    color: #495057;
+}
+
+.h3-historias {
+    margin: 20px 0;
+    font-size: 1.8rem;
+    color: #17a2b8;
+}
+
+/* Stories list */
+.stories-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Individual story card */
+.story-card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #dee2e6;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.story-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.name {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #343a40;
     margin-bottom: 10px;
 }
 
-/* Subtítulo */
-h2 {
-    /* font-size: 1.5rem; */
-    color: #555;
-    margin-top: 10px;
-    /* margin-bottom: 10px; */
-}
-
-/* Descripción e ícono */
-p {
-    font-size: 1.2rem;
-    text-align: center;
-    /* line-height: 1.6; */
-    color: #666;
-}
-
-/* Contenedor de historias */
-.stories-container {
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #fff;
-    /* border-radius: 8px; */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 800px;
-}
-
-/* Lista de historias */
-ul.link-story {
-    list-style-type: none;
-    padding: 30px;
-
-}
-
-.link-story li {
-    margin-bottom: 15px;
-    text-decoration: none;
-    background-color: #f5f5f5;
-    border-radius: 24px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 16px;
-    margin: 20px 0;
-    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+.description {
+    font-size: 1rem;
+    color: #6c757d;
 }
 
 .link {
     text-decoration: none;
-}
-
-/* Estilos para las tarjetas de historias */
-.story-card {
-    background-color: #fff;
-    border-radius: 24px;
-    padding: 15px;
-    text-decoration: none;
-    margin-bottom: 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.1s;
-}
-
-.story-card:hover {
-    transform: translateY(-4px);
-}
-
-
-.name {
-    text-decoration: none;
-}
-
-/* Mensaje de carga */
-.loading-message {
-    text-align: center;
-    font-size: 1.2rem;
-    color: #888;
-    margin-top: 20px;
-}
-
-/* Mensaje de error o no encontrado */
-.error-message {
-    text-align: center;
-    color: red;
-    font-size: 1.3rem;
-    margin-top: 20px;
-}
-
-div-historias {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.h3-historias {
-    text-align: center;
-    color: #333;
+    color: inherit;
 }

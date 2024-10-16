@@ -64,10 +64,7 @@ export const Story = () => {
                             )}
                         </div>
                         <div className="div-historias">
-
                             <h3 className="h3-historia">Tareas de la historia</h3>
-
-
                             {loadingTasks ? (
                                 <p>Cargando tareas...</p>
                             ) : tasks && tasks.length > 0 ? (

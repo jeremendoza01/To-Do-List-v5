@@ -37,7 +37,7 @@ function Navbar() {
                     </div>
                 </nav>
                 <div className='div-user'>
-                    <Link to={"/settings"} className='text-lista' >Settings</Link>
+                    <Link to={"/settings"} className='text-settings' >Settings</Link>
                 </div>
             </div >
         </>

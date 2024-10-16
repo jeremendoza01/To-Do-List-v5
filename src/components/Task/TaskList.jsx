@@ -1,5 +1,5 @@
 import React from 'react'
-// import  "../"
+
 import { TaskCard } from '../TaskCard/TaskCard';
 
 export const TaskList = ({ tasks }) => {
@@ -10,8 +10,6 @@ export const TaskList = ({ tasks }) => {
                     <TaskCard
                         key={task._id}
                         task={task}
-                    /*                 toggleTask={toggleTask}
-                                    handleDelete={handleDelete} */
                     />
                 ))}
             </ul>
