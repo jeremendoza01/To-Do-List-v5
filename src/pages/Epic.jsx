@@ -25,8 +25,8 @@ export const Epic = () => {
                     )}
                 </div>
 
-                <div>
-                    <h3>Historias:</h3>
+                <div className="div-historias">
+                    <h3 className="h3-historias">Historias:</h3>
                     {loadingStories ? <p>Cargando historias...</p> :
                         <ul className="link-story">
                             {storiesData.map(story =>

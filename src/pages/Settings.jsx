@@ -1,7 +1,11 @@
 import Navbar from "../components/Navbar/Navbar"
-// import "./styles/"
+import { useAuth } from "../auth/AuthProvider"
+import "./styles/styles-Settings.css"
 
 function Settings() {
+
+    const { logout } = useAuth();
+
 
     return (
 
@@ -9,7 +13,8 @@ function Settings() {
             <Navbar />
             <div className="container">
                 <h1>Settings</h1>
-                <h2>Esta página esta en desarrollo</h2>
+                <h2>Cerrar sesion?</h2>
+                <button type="submit" className="button" onClick={logout}>Cerrar Sesion</button>
             </div>
         </>
     );

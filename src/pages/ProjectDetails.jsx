@@ -58,7 +58,7 @@ const ProjectDetails = () => {
 
                         </div>
                         <div className='project-epics'>
-                            <h3>Epicas</h3>
+                            <h3 className='h3-epicas'>Epicas</h3>
                             {
                                 loadingEpics ? <p>Cargando epicas...</p> :
                                     epics && epics.length > 0 ?

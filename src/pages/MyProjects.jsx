@@ -12,8 +12,8 @@ export const MyProjects = () => {
         <>
             <Navbar />
             <div className="container">
-                <h2>Mis Proyectos</h2>
-                <div>
+                <h2 className="h2-projects">Mis Proyectos</h2>
+                <div className="div-projects">
                     {loadingProjects ? (
                         <p>Cargando proyectos...</p>
                     ) : projects && projects.length > 0 ? (

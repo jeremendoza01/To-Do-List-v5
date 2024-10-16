@@ -1,48 +1,17 @@
+/* styles-MyProjects.css */
 .container {
-    padding-top: 6rem;
+    max-width: 800px;
     margin: 0 auto;
-}
-
-h2 {
-    padding-bottom: 0.5em;
-    text-align: center;
-    color: #333;
-    margin-bottom: 20px;
-    font-size: 1.5rem;
-}
-
-h3 {
-    text-align: center;
-    color: #666;
-    font-size: 1.4rem;
-}
-
-.project-card {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    margin: 10px;
-    transition: transform 0.3s ease-in-out;
 }
 
-.project-card:hover {
-    transform: scale(1.05);
+.h2-projects {
+    font-size: 2rem;
+    margin-bottom: 20px;
 }
 
-/* Estilos adicionales para la barra de navegación */
-.navbar {
-    background-color: #333;
-    color: #fff;
-    padding: 15px;
-}
-
-.navbar a {
-    color: #fff;
-    text-decoration: none;
-    margin-right: 15px;
-}
-
-.navbar a:hover {
-    text-decoration: underline;
+.div-projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

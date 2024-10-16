@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-
+import { API_URL } from "../api"
 export const useFetchStories = () => {
 
     const getStories = async () => {
-        const url = `https://lamansysfaketaskmanagerapi.onrender.com/api/stories`
+        const url = `${API_URL}/stories`
         const resp = await fetch(url, {
             method: 'GET',
             headers: {

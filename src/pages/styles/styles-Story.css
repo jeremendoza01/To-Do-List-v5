@@ -7,6 +7,10 @@ body {
     color: #333;
 }
 
+.container {
+    margin-top: 7em;
+}
+
 /* Contenedor principal */
 .container-story {
     /* max-width: 1200px; */
@@ -71,6 +75,7 @@ ul li {
 .task-card {
     background-color: #f9f9f9;
     /* border-radius: 8px; */
+    width: 45em;
     padding: 15px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: transform 0.15s;
@@ -139,5 +144,15 @@ ul li {
 }
 
 .div-users {
+    text-align: center;
+}
+
+.div-historias {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.h3-historias {
     text-align: center;
 }

@@ -1,14 +1,20 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { RouterProvider } from "react-router-dom";
-import { ProjectProvider } from "./context/ProjectContext";
+// import { ProjectProvider } from "./context/ProjectContext";
+import { AuthProvider } from './auth/AuthProvider.jsx'
 import "./index.css";
-import router from "./routes/Routers"
+import { token } from "./token.js";
+import router from "./routes/Router"
+
+
+
+localStorage.setItem('token', token);
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <ProjectProvider>
+    <AuthProvider>
       <RouterProvider router={router} />
-    </ProjectProvider>
+    </AuthProvider>
   </StrictMode>
 );

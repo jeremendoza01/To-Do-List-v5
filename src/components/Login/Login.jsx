@@ -1,72 +1,85 @@
-
 import './stylesLogin.css';
 import { useState } from 'react';
+import { useAuth } from "../../auth/AuthProvider";
 const Login = () => {
-
-    const [formData, setFormData] = useState({
-        username: '',
-        password: '',
-    });
-
+    const { login } = useAuth();
+    const [username, setUsername] = useState("");
+    const [password, setPassword] = useState("");
     const [error, setError] = useState('');
 
-    const handleChange = (e) => {
-        setFormData({
-            ...formData,
-            [e.target.name]: e.target.value,
-        });
-    };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-
-        const { username, password } = formData;
-
-        if (!username || !password) {
-            setError('Usuario y contraseña invalidos');
-            return;
+        try {
+            await login(username, password);
+            setError('');
+        } catch (err) {
+            setError('Error al iniciar sesión. Por favor verifica tus credenciales.');
         }
-
-        console.log('Ingresando con:', formData);
-
-        setError('');
-        setFormData({
-            username: '',
-            password: '',
-        });
     };
 
     return (
-        <>
-            <div className='div-login'>
-                <h2>Login</h2>
-                {error && <p style={{ color: 'red' }}>{error}</p>}
-                <form onSubmit={handleSubmit} className='form'>
-                    <div>
-                        <input
-                            className='input'
-                            type="text"
-                            name="username"
-                            placeholder='Usuario'
-                            value={formData.username}
-                            onChange={handleChange}
-                        />
-                    </div>
-                    <div>
-                        <input
-                            className='input'
-                            type="password"
-                            name="password"
-                            placeholder='Contraseña'
-                            value={formData.password}
-                            onChange={handleChange}
-                        />
-                    </div>
-                    <button className='button-submit' type="submit">Ingresa</button>
-                </form>
-            </div>
-        </>
+
+        <div className='div-login' >
+            <form className="form" onSubmit={handleSubmit}>
+                <h1>Iniciar Sesion</h1>
+
+                {error && <p className='error'>{error}</p>}
+
+                <label >Username</label>
+                <input
+                    className='input'
+                    type="text"
+                    value={username}
+                    onChange={(e) => setUsername(e.target.value)}
+
+                />
+
+                <label >Password</label>
+                <input
+                    className='input'
+                    type="password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+
+                />
+
+                <button className='button-submit' type='submit' >
+                    Iniciar sesion
+                </button>
+            </form>
+
+        </div>
     );
+
 };
 
 export default Login;
+
+// return (
+//     <div className='div-login'>
+//         <h2>Login</h2>
+//         {error && <p>{error}</p>}
+//         <form className='form' onSubmit={handleSubmit}>
+//             <div>
+//                 <input
+//                     className='input'
+//                     type="text"
+//                     placeholder='Usuario'
+//                     value={username}
+//                     onChange={(e) => setUsername(e.target.value)}
+//                 />
+//             </div>
+//             <div>
+//                 <input
+//                     className='input'
+//                     type="password"
+//                     placeholder='Contraseña'
+//                     value={password}
+//                     onChange={(e) => setPassword(e.target.value)}
+//                 />
+//             </div>
+//             <button className='button-submit' type='submit'>Ingresa</button>
+//         </form>
+//     </div>
+// );
