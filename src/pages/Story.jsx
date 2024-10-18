@@ -29,11 +29,11 @@ export const Story = () => {
                         <p><b>Descripción:</b> {story.description}</p>
                         <div className="details-grid">
                             <div className="div-property">
-                                <b>Propietario:</b>
+                                <b className="text-propietario">Propietario:</b>
                                 {loadingOwner ? (
                                     <p>Cargando propietario...</p>
                                 ) : owner && owner.length > 0 && owner[0]?.name ? (
-                                    <span>{owner[0].name.first} {owner[0].name.last}</span>
+                                    <span className="text-propietario">{owner[0].name.first} {owner[0].name.last}</span>
                                 ) : (
                                     <span>No se encontró el propietario</span>
                                 )}
@@ -41,12 +41,12 @@ export const Story = () => {
                                 <p><b>Puntos:</b> {story.points !== null ? story.points : 'Sin puntos asignados'}</p>
                             </div>
                             <div className="div-data-story">
-                                <span><b>Fecha de creación:</b> {new Date(story.created).toLocaleDateString()}</span>
+                                <span className="text-fecha"><b>Fecha de creación:</b> {new Date(story.created).toLocaleDateString()}</span>
                                 <p><b>Inicio:</b> {story.started ? new Date(story.started).toLocaleDateString() : "No iniciado"}</p>
                                 <p><b>Finalización:</b> {story.finished ? new Date(story.finished).toLocaleDateString() : 'No finalizado'}</p>
                             </div>
                             <div className="div-users">
-                                <b>Usuarios asignados a esta historia:</b>
+                                <b className="text-users">Usuarios asignados a esta historia:</b>
                                 {loadingAssigned ? (
                                     <p>Cargando asignados...</p>
                                 ) : assigned && assigned.length > 0 ? (
@@ -65,16 +65,22 @@ export const Story = () => {
                             {loadingTasks ? (
                                 <p>Cargando tareas...</p>
                             ) : tasks && tasks.length > 0 ? (
-                                <TaskList tasks={tasks} />
+                                <>
+                                    <TaskList tasks={tasks} />
+                                    <button className="button-add-task">Agregar Tarea</button>
+                                </>
                             ) : (
-                                <p>No hay tareas en esta historia</p>
+                                <>
+                                    <p>No hay tareas en esta historia</p>
+                                    <button className="button-add-task">Agregar Tarea</button>
+                                </>
                             )}
                         </div>
                     </div>
                 ) : (
                     <p>Los datos de la historia no están disponibles</p>
                 )}
-            </div>
+            </div >
         </>
     );
 };

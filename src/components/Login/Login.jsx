@@ -26,7 +26,7 @@ const Login = () => {
 
                 {error && <p className='error'>{error}</p>}
 
-                <label >Username</label>
+                <label >Usuario</label>
                 <input
                     className='input'
                     type="text"
@@ -35,7 +35,7 @@ const Login = () => {
 
                 />
 
-                <label >Password</label>
+                <label >Contraseña</label>
                 <input
                     className='input'
                     type="password"

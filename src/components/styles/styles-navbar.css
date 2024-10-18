@@ -24,9 +24,10 @@ body {
 }
 
 .logo-navbar {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: bold;
-    margin-left: 10px;
+    margin: 15px 15px;
+
 }
 
 .icon-navbar {
@@ -37,8 +38,8 @@ body {
 .text-login {
     color: white;
     text-decoration: none;
-    font-size: 1rem;
-    margin-right: 10px;
+    font-size: 1.05rem;
+    margin-right: 5px;
     padding: 5px 10px;
     border: 1px solid white;
     border-radius: 5px;
@@ -51,17 +52,18 @@ body {
 
 /* Sidebar Styles */
 .sidebar {
+    font-size: 1.1em;
     position: fixed;
     top: 0;
     left: 0;
-    width: 250px;
+    width: 25%;
     height: 100%;
     background-color: #343a40;
     color: white;
     transform: translateX(-100%);
     transition: transform 0.3s ease;
     z-index: 1000;
-    padding: 20px;
+    padding: 15px;
 }
 
 .sidebar.open {
@@ -76,12 +78,17 @@ body {
 }
 
 .close-btn {
-    font-size: 2.5rem;
+    font-size: 2rem;
     cursor: pointer;
 }
 
 .nav-sidebar {
+    justify-content: space-between;
     margin-top: 20px;
+}
+
+.div-user {
+    padding-top: 425px;
 }
 
 .lista-navbar {
@@ -98,6 +105,7 @@ body {
     text-decoration: none;
     display: block;
     padding: 10px 10px;
+    text-align: center;
     transition: background-color 0.3s ease;
 }
 
@@ -105,23 +113,27 @@ body {
     background-color: #495057;
 }
 
-.div-user {
-    position: absolute;
-    bottom: 20px;
-    width: 100%;
-}
+
 
 .text-settings {
     color: white;
     text-decoration: none;
-    display: block;
-    width: 65px;
     text-align: center;
+    display: block;
     padding: 10px 10px;
+    transition: background-color 0.3s ease;
     margin-bottom: 40px;
     transition: background-color 0.3s ease;
 }
 
 .text-settings:hover {
     background-color: #495057;
+}
+
+/* Media Query */
+@media (max-width: 1000px) {
+
+    .sidebar {
+        min-width: 35%;
+    }
 }

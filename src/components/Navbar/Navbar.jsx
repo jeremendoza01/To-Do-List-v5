@@ -18,13 +18,13 @@ function Navbar() {
             <header className="App-header">
                 <div className="div-header">
                     <HiMenu className='icon-navbar' onClick={toggleSidebar} />
-                    <h1 className='logo-navbar'>VIEW NAME</h1>
+                    <h1 className='logo-navbar'>TASK TRACKER</h1>
                     <Link to={"/login"} className='text-login'>Login</Link>
                 </div>
             </header>
             <div className={`sidebar ${isSidebarOpen ? 'open' : ''}`}>
                 <div className='div-logo-sidebar'>
-                    <h1 className="logo-navbar">VIEW NAME</h1>
+                    <h1 className="logo-navbar">TASK TRACKER</h1>
                     <HiOutlineX className='close-btn' onClick={toggleSidebar} />
                 </div>
                 <nav className='nav-sidebar'>
@@ -35,10 +35,13 @@ function Navbar() {
                             <Link to={"/my-stories"} className='text-lista'>My Stories</Link>
                         </ul>
                     </div>
+
+                    <div className='div-user'>
+                        <ul >
+                            <Link to={"/settings"} className='text-settings' >Settings</Link>
+                        </ul>
+                    </div>
                 </nav>
-                <div className='div-user'>
-                    <Link to={"/settings"} className='text-settings' >Settings</Link>
-                </div>
             </div >
         </>
 

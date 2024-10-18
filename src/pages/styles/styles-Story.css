@@ -67,3 +67,42 @@ ul li {
 .p-estado {
     margin-top: 10px;
 }
+
+.text-propietario {
+    font-size: 1.1em;
+}
+
+.text-fecha {
+    font-size: 1.1em;
+}
+
+.text-users {
+    font-size: 1.1em;
+}
+
+.button-add-task {
+    background-color: #17a2b8;
+    color: white;
+    margin-top: 20px;
+    border: none;
+    padding: 10px 40px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.button-add-task:hover {
+    background-color: #138496;
+    transform: translateY(-2px);
+}
+
+.button-add-task:active {
+    background-color: #117a8b;
+    transform: translateY(0);
+}
+
+.button-add-task:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(23, 162, 184, 0.5);
+}

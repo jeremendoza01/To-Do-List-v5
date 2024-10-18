@@ -4,7 +4,7 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     margin: 20px 20px;
     border-radius: 2em;
-    /* transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
     user-select: none;
 }
 
