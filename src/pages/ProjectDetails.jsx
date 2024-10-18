@@ -27,7 +27,7 @@ const ProjectDetails = () => {
             <Navbar />
             <div className="container-project">
                 <h1 className='h1-detalles'>Detalles del proyecto</h1>
-                {loading && <h3>Cargando detalles del proyecto...</h3>}
+                {loading && <h3 className='h3-loading'>Cargando detalles del proyecto...</h3>}
                 {project && (
                     <>
                         <div>
