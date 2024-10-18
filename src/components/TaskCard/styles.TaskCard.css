@@ -14,7 +14,7 @@
 }
 
 .name {
-    font-size: 1.2rem;
+    font-size: 1.15rem;
     font-family: Arial, sans-serif;
     color: #333;
     padding-top: 15px;
@@ -22,8 +22,8 @@
 }
 
 .description {
-    font-size: 1.1rem;
-    color: #333;
+    font-size: 1rem;
+    color: rgb(58, 58, 58);
     margin-bottom: 15px;
 }
 

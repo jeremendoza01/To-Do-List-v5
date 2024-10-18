@@ -66,6 +66,7 @@ ul li {
 
 .p-estado {
     margin-top: 10px;
+    font-size: 1.05em;
 }
 
 .text-propietario {
@@ -105,4 +106,16 @@ ul li {
 .button-add-task:focus {
     outline: none;
     box-shadow: 0 0 0 3px rgba(23, 162, 184, 0.5);
+}
+
+.h1-detalles {
+    font-size: 1.4em;
+}
+
+.h2-name {
+    font-size: 1.3em;
+}
+
+.p-descripcion {
+    font-size: 1em;
 }

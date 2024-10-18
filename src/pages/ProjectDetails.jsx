@@ -26,7 +26,7 @@ const ProjectDetails = () => {
         <>
             <Navbar />
             <div className="container-project">
-                <h1>Detalles del proyecto</h1>
+                <h1 className='h1-detalles'>Detalles del proyecto</h1>
                 {loading && <h3>Cargando detalles del proyecto...</h3>}
                 {project && (
                     <>
@@ -42,7 +42,7 @@ const ProjectDetails = () => {
                                 }
                             </div>
                             <div className="project-members">
-                                <h3>Miembros</h3>
+                                <h3 className='h3-miembros'>Miembros</h3>
                                 {loadingMembers ? <p>Cargando miembros...</p> :
                                     members && members.length > 0 ?
                                         <ul>

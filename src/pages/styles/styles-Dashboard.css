@@ -30,3 +30,11 @@ p {
     color: #6c757d;
     text-align: center;
 }
+
+.h1-user {
+    font-size: 1.6em;
+}
+
+.p {
+    font-size: 1em;
+}

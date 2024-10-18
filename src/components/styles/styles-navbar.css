@@ -1,4 +1,3 @@
-/* Global Styles */
 body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
@@ -6,7 +5,7 @@ body {
     color: #333;
 }
 
-/* Header Styles */
+
 .App-header {
     background-color: #343a40;
     padding: 10px 20px;
@@ -24,9 +23,9 @@ body {
 }
 
 .logo-navbar {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     font-weight: bold;
-    margin: 15px 15px;
+    margin: 15px 0px;
 
 }
 
@@ -52,18 +51,18 @@ body {
 
 /* Sidebar Styles */
 .sidebar {
-    font-size: 1.1em;
+    font-size: 1.05em;
     position: fixed;
     top: 0;
     left: 0;
-    width: 25%;
+    width: 35%;
     height: 100%;
     background-color: #343a40;
     color: white;
     transform: translateX(-100%);
     transition: transform 0.3s ease;
     z-index: 1000;
-    padding: 15px;
+    padding: 10px;
 }
 
 .sidebar.open {
@@ -134,6 +133,15 @@ body {
 @media (max-width: 1000px) {
 
     .sidebar {
-        min-width: 35%;
+        min-width: 50%;
+
+    }
+
+    .lista-navbar {
+        padding-top: 5px;
+    }
+
+    .div-user {
+        padding-top: 425px;
     }
 }

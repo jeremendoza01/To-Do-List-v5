@@ -22,8 +22,7 @@ const Login = () => {
 
         <div className='div-login' >
             <form className="form" onSubmit={handleSubmit}>
-                <h1>Iniciar Sesion</h1>
-
+                <h1 className='h1-inicio'>Iniciar Sesion</h1>
                 {error && <p className='error'>{error}</p>}
 
                 <label >Usuario</label>

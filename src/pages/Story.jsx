@@ -20,13 +20,13 @@ export const Story = () => {
         <>
             <Navbar />
             <div className="container">
-                <h1>Detalles de la historia</h1>
+                <h1 className="h1-detalles">Detalles de la historia</h1>
                 {loadingStory ? (
                     <p>Cargando detalles de la historia...</p>
                 ) : story ? (
                     <div>
-                        <h2>{story.name} {story.icon}</h2>
-                        <p><b>Descripción:</b> {story.description}</p>
+                        <h2 className="h2-name">{story.name} {story.icon}</h2>
+                        <p className="p-descripcion"><b>Descripción:</b> {story.description}</p>
                         <div className="details-grid">
                             <div className="div-property">
                                 <b className="text-propietario">Propietario:</b>
@@ -38,12 +38,12 @@ export const Story = () => {
                                     <span>No se encontró el propietario</span>
                                 )}
                                 <p className="p-estado"><b>Estado:</b> {story.status}</p>
-                                <p><b>Puntos:</b> {story.points !== null ? story.points : 'Sin puntos asignados'}</p>
+                                <p className="p-estado"><b>Puntos:</b> {story.points !== null ? story.points : 'Sin puntos asignados'}</p>
                             </div>
                             <div className="div-data-story">
                                 <span className="text-fecha"><b>Fecha de creación:</b> {new Date(story.created).toLocaleDateString()}</span>
-                                <p><b>Inicio:</b> {story.started ? new Date(story.started).toLocaleDateString() : "No iniciado"}</p>
-                                <p><b>Finalización:</b> {story.finished ? new Date(story.finished).toLocaleDateString() : 'No finalizado'}</p>
+                                <p className="p-estado"><b>Inicio:</b> {story.started ? new Date(story.started).toLocaleDateString() : "No iniciado"}</p>
+                                <p className="p-estado"><b>Finalización:</b> {story.finished ? new Date(story.finished).toLocaleDateString() : 'No finalizado'}</p>
                             </div>
                             <div className="div-users">
                                 <b className="text-users">Usuarios asignados a esta historia:</b>

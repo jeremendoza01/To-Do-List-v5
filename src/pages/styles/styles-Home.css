@@ -63,6 +63,14 @@
     font-size: 0.8em;
 }
 
+.h2-home {
+    font-size: 1.5em;
+}
+
+.p-home {
+    font-size: 1.1em;
+}
+
 @keyframes fadeIn {
     0% {
         opacity: 0;

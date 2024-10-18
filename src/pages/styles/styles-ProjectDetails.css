@@ -8,7 +8,7 @@ body {
 /* Container for Project details and epics */
 .container-project {
     max-width: 1200px;
-    margin: 5em auto;
+    margin: 1em auto;
     padding: 20px;
     background-color: #fff;
     border-radius: 8px;
@@ -20,14 +20,13 @@ body {
     margin-bottom: 40px;
 }
 
-h1,
-h2,
+
 h3 {
     color: #17a2b8;
 }
 
 .project-name {
-    font-size: 2rem;
+    font-size: 1.7rem;
     font-weight: bold;
 }
 
@@ -49,12 +48,6 @@ h3 {
 
 .project-owner-name {
     color: #007bff;
-}
-
-.project-members h3,
-.project-epics h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
 }
 
 /* Members list */
@@ -101,4 +94,12 @@ h3 {
     font-size: 1rem;
     color: #6c757d;
     margin: 0;
+}
+
+.h1-detalles {
+    font-size: 1.8em;
+}
+
+.h3-miembros {
+    font-size: 1.2em;
 }

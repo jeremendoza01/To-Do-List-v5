@@ -15,11 +15,11 @@ export const Epic = () => {
             <Navbar />
             <div className="container-epic">
                 <div className="div-epic">
-                    <h1>Detalles de la epica</h1>
+                    <h1 className="h1-epica">Detalles de la epica</h1>
                     {loadingEpics && <p>Cargando detalles de la epica</p>}
                     {epic && (
                         <div className="div-name-epic">
-                            <h2>{epic.name} {epic.icon}</h2>
+                            <h2 className="h2-descripcion">{epic.name} {epic.icon}</h2>
                             <p>Descripcion: {epic.description}</p>
                         </div>
                     )}

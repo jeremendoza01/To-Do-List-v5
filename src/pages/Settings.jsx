@@ -12,8 +12,8 @@ function Settings() {
         <>
             <Navbar />
             <div className="container">
-                <h1>Settings</h1>
-                <h2>Cerrar sesion?</h2>
+                <h1 className="h2-settings">Settings</h1>
+                <h2 className="h2-sesion">Cerrar sesion?</h2>
                 <button type="submit" className="button" onClick={logout}>Cerrar Sesion</button>
             </div>
         </>
