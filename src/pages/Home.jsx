@@ -34,7 +34,7 @@ const HomePage = () => {
             </main>
 
             <footer className="footer">
-                <p>© 2024 Task Tracker Pro - Todos los derechos reservados</p>
+                <p className='p-footer'>© 2024 Task Tracker Pro - Todos los derechos reservados</p>
             </footer>
         </div>
     );

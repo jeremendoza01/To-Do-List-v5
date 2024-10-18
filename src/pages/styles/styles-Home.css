@@ -71,6 +71,10 @@
     font-size: 1.1em;
 }
 
+.p-footer {
+    font-size: 1em;
+}
+
 @keyframes fadeIn {
     0% {
         opacity: 0;
