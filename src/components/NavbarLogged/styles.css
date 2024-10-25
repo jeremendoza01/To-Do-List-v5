@@ -8,17 +8,17 @@ body {
 
 /* Header Styles */
 .App-header {
-    background-color: #343a40;
-    padding: 10px 20px;
+    /* background-color: #343a40; */
+    /* padding: 10px 20px; */
     color: white;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    /* justify-content: space-between; */
+    /* align-items: center; */
 }
 
 .div-header {
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     align-items: center;
     width: 100%;
 }
@@ -57,7 +57,7 @@ body {
 
 .div-logo-sidebar {
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     align-items: center;
     margin-bottom: 20px;
 }
