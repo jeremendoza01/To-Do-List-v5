@@ -1,6 +1,7 @@
 import './stylesLogin.css';
 import { useState } from 'react';
 import { useAuth } from "../../auth/AuthProvider";
+import NavbarLogin from "../NavbarLogin/NavbarLogin"
 const Login = () => {
     const { login } = useAuth();
     const [username, setUsername] = useState("");
@@ -19,66 +20,41 @@ const Login = () => {
     };
 
     return (
+        <>
+            <NavbarLogin />
+            <div className='div-login' >
+                <form className="form" onSubmit={handleSubmit}>
+                    <h1 className='h1-inicio'>Iniciar Sesion</h1>
+                    {error && <p className='error'>{error}</p>}
+                    <div className='div-usuario'>
+                        <label >Usuario</label>
+                        <input
+                            className='input'
+                            type="text"
+                            value={username}
+                            onChange={(e) => setUsername(e.target.value)}
 
-        <div className='div-login' >
-            <form className="form" onSubmit={handleSubmit}>
-                <h1 className='h1-inicio'>Iniciar Sesion</h1>
-                {error && <p className='error'>{error}</p>}
+                        />
 
-                <label >Usuario</label>
-                <input
-                    className='input'
-                    type="text"
-                    value={username}
-                    onChange={(e) => setUsername(e.target.value)}
+                        <label >Contraseña</label>
+                        <input
+                            className='input'
+                            type="password"
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
 
-                />
+                        />
+                    </div>
 
-                <label >Contraseña</label>
-                <input
-                    className='input'
-                    type="password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
+                    <button className='button-submit' type='submit' >
+                        Iniciar sesion
+                    </button>
+                </form>
 
-                />
-
-                <button className='button-submit' type='submit' >
-                    Iniciar sesion
-                </button>
-            </form>
-
-        </div>
+            </div>
+        </>
     );
 
 };
 
 export default Login;
-
-// return (
-//     <div className='div-login'>
-//         <h2>Login</h2>
-//         {error && <p>{error}</p>}
-//         <form className='form' onSubmit={handleSubmit}>
-//             <div>
-//                 <input
-//                     className='input'
-//                     type="text"
-//                     placeholder='Usuario'
-//                     value={username}
-//                     onChange={(e) => setUsername(e.target.value)}
-//                 />
-//             </div>
-//             <div>
-//                 <input
-//                     className='input'
-//                     type="password"
-//                     placeholder='Contraseña'
-//                     value={password}
-//                     onChange={(e) => setPassword(e.target.value)}
-//                 />
-//             </div>
-//             <button className='button-submit' type='submit'>Ingresa</button>
-//         </form>
-//     </div>
-// );

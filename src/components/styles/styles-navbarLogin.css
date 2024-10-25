@@ -1,4 +1,3 @@
-/* Global Styles */
 body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
@@ -6,7 +5,10 @@ body {
     color: #333;
 }
 
-/* Header Styles */
+.logo-navbar {
+    padding: 0px 20px;
+}
+
 .App-header {
     background-color: #343a40;
     padding: 10px 20px;
@@ -23,10 +25,13 @@ body {
     width: 100%;
 }
 
-.logo-navbar {
-    font-size: 1.3rem;
+.icon-home {
+    color: #17a2b8;
+    font-size: 2rem;
     font-weight: bold;
-    margin: 15px 0;
+    text-decoration: none;
+    margin: 15px 0px;
+
 }
 
 .icon-navbar {
@@ -55,20 +60,18 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    max-width: 300px;
+    width: 35%;
     height: 100%;
     background-color: #343a40;
     color: white;
     transform: translateX(-100%);
     transition: transform 0.3s ease;
     z-index: 1000;
-    /* padding: 10px; */
+    padding: 10px;
 }
 
 .sidebar.open {
     transform: translateX(0);
-    padding: 0;
 }
 
 .div-logo-sidebar {
@@ -84,13 +87,12 @@ body {
 }
 
 .nav-sidebar {
+    justify-content: space-between;
     margin-top: 20px;
 }
 
 .div-user {
-    position: absolute;
-    bottom: 20px;
-    width: 100%;
+    padding-top: 425px;
 }
 
 .lista-navbar {
@@ -115,6 +117,8 @@ body {
     background-color: #495057;
 }
 
+
+
 .text-settings {
     color: white;
     text-decoration: none;
@@ -131,14 +135,22 @@ body {
 }
 
 /* Media Query */
-@media (max-width: 768px) {
-    .sidebar {
-        width: 80%;
-    }
-}
+@media (max-width: 1000px) {
 
-@media (max-width: 576px) {
     .sidebar {
-        width: 100%;
+        min-width: 50%;
+
+    }
+
+    .lista-navbar {
+        padding-top: 5px;
+    }
+
+    .div-user {
+        padding-top: 345px;
+    }
+
+    .logo-navbar {
+        padding: 0px 25px;
     }
 }

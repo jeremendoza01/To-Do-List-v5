@@ -11,6 +11,22 @@
     background-color: #f9f9f9;
 }
 
+.App-header {
+    background-color: #343a40;
+    padding: 10px 20px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.div-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
 .h1-inicio {
     font-size: 1.5em;
 }
@@ -52,4 +68,9 @@ label {
 
 h2 {
     text-align: center;
+}
+
+.div-usuario {
+    text-align: center;
+    padding-top: 15px;
 }
