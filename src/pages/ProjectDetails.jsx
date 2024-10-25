@@ -1,7 +1,7 @@
 import { useParams } from 'react-router-dom';
 import React, { useMemo } from 'react';
 import "../pages/styles/styles-ProjectDetails.css";
-import Navbar from "../components/Navbar/Navbar";
+import NavbarLogged from "../components/NavbarLogged/NavbarLogged";
 import { useFetchProjectsById } from "../hooks/hookMyProjectsById";
 import { useFetchEpics } from '../hooks/hookEpics';
 import { useFetchUsersById } from "../hooks/hookUsersById";
@@ -24,7 +24,7 @@ const ProjectDetails = () => {
 
     return (
         <>
-            <Navbar />
+            <NavbarLogged />
             <div className="container-project">
                 <h1 className='h1-detalles'>Detalles del proyecto</h1>
                 {loading && <h3 className='h3-loading'>Cargando detalles del proyecto...</h3>}

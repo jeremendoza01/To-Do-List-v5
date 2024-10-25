@@ -1,3 +1,4 @@
+/* Global Styles */
 body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
@@ -5,10 +6,7 @@ body {
     color: #333;
 }
 
-.logo-navbar {
-    padding: 0px 20px;
-}
-
+/* Header Styles */
 .App-header {
     background-color: #343a40;
     padding: 10px 20px;
@@ -25,53 +23,36 @@ body {
     width: 100%;
 }
 
-.icon-home {
-    color: #17a2b8;
-    font-size: 2rem;
+.logo-navbar {
+    font-size: 1.5rem;
     font-weight: bold;
-    text-decoration: none;
-    margin: 15px 0px;
-
+    margin-left: 10px;
 }
 
 .icon-navbar {
-    font-size: 2rem;
+    font-size: 2.5rem;
     cursor: pointer;
-}
-
-.text-login {
-    color: white;
-    text-decoration: none;
-    font-size: 1.05rem;
-    margin-right: 5px;
-    padding: 5px 10px;
-    border: 1px solid white;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.text-login:hover {
-    background-color: #495057;
 }
 
 /* Sidebar Styles */
 .sidebar {
-    font-size: 1.05em;
     position: fixed;
     top: 0;
     left: 0;
-    width: 35%;
+    width: 250px;
     height: 100%;
     background-color: #343a40;
     color: white;
     transform: translateX(-100%);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, opacity 0.3s ease;
     z-index: 1000;
-    padding: 10px;
+    padding: 20px;
+    opacity: 0;
 }
 
 .sidebar.open {
     transform: translateX(0);
+    opacity: 1;
 }
 
 .div-logo-sidebar {
@@ -82,17 +63,12 @@ body {
 }
 
 .close-btn {
-    font-size: 2rem;
+    font-size: 2.5rem;
     cursor: pointer;
 }
 
 .nav-sidebar {
-    justify-content: space-between;
     margin-top: 20px;
-}
-
-.div-user {
-    padding-top: 425px;
 }
 
 .lista-navbar {
@@ -108,7 +84,7 @@ body {
     color: white;
     text-decoration: none;
     display: block;
-    padding: 10px 10px;
+    padding: 10px 0;
     text-align: center;
     transition: background-color 0.3s ease;
 }
@@ -117,16 +93,18 @@ body {
     background-color: #495057;
 }
 
-
+.div-user {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+}
 
 .text-settings {
     color: white;
     text-decoration: none;
     text-align: center;
     display: block;
-    padding: 10px 10px;
-    transition: background-color 0.3s ease;
-    margin-bottom: 40px;
+    padding: 10px 0;
     transition: background-color 0.3s ease;
 }
 
@@ -136,21 +114,30 @@ body {
 
 /* Media Query */
 @media (max-width: 1000px) {
-
     .sidebar {
-        min-width: 50%;
-
+        width: 200px;
     }
 
-    .lista-navbar {
-        padding-top: 5px;
+    .icon-navbar {
+        font-size: 2rem;
     }
 
-    .div-user {
-        padding-top: 345px;
+    .close-btn {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .sidebar {
+        width: 150px;
     }
 
     .logo-navbar {
-        padding: 0px 25px;
+        font-size: 1rem;
+    }
+
+    .icon-navbar,
+    .close-btn {
+        font-size: 1.5rem;
     }
 }

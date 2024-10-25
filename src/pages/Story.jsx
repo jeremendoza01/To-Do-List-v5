@@ -1,6 +1,6 @@
 import React, { useMemo } from "react";
 import { useParams } from "react-router-dom";
-import Navbar from "../components/Navbar/Navbar";
+import NavbarLogged from "../components/NavbarLogged/NavbarLogged";
 import { useFetchStoryById } from "../hooks/hookStoriesById";
 import { useFetchUsersById } from "../hooks/hookUsersById";
 import { useFetchTasksStory } from "../hooks/hookTasksStory";
@@ -18,7 +18,7 @@ export const Story = () => {
 
     return (
         <>
-            <Navbar />
+            <NavbarLogged />
             <div className="container">
                 <h1 className="h1-detalles">Detalles de la historia</h1>
                 {loadingStory ? (

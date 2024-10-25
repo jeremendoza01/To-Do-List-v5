@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import { StoryCard } from "../components/StoryCard/StoryCard";
 import "./styles/styles-Epic.css";
-import Navbar from "../components/Navbar/Navbar";
+import NavbarLogged from "../components/NavbarLogged/NavbarLogged";
 import { useFetchEpicsById } from "../hooks/hookEpicsById";
 import { useFetchStoriesEpic } from "../hooks/hookStoriesEpic";
 
@@ -12,7 +12,7 @@ export const Epic = () => {
 
     return (
         <>
-            <Navbar />
+            <NavbarLogged />
             <div className="container-epic">
                 <div className="div-epic">
                     <h1 className="h1-epica">Detalles de la epica</h1>

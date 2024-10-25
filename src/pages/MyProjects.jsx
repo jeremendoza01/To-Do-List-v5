@@ -1,6 +1,6 @@
 // import { useEffect, useState } from "react";
 import ProjectCard from "../components/ProyectCard/ProyectCard";
-import Navbar from "../components/Navbar/Navbar";
+import NavbarLogged from "../components/NavbarLogged/NavbarLogged";
 import "./styles/styles-MyProjects.css";
 import { useFetchProjects } from '../hooks/hookMyProjects';
 
@@ -10,7 +10,7 @@ export const MyProjects = () => {
 
     return (
         <>
-            <Navbar />
+            <NavbarLogged />
             <div className="container">
                 <h2 className="h2-projects">Mis Proyectos</h2>
                 <div className="div-projects">

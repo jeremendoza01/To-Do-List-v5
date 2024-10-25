@@ -4,12 +4,19 @@
     flex-direction: column;
     width: 300px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 25px 0px;
     align-items: center;
     border: 1px solid #ccc;
     border-radius: 5px;
     background-color: #f9f9f9;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.form:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
 
 .App-header {
     background-color: #343a40;
@@ -71,6 +78,8 @@ h2 {
 }
 
 .div-usuario {
+    display: flex;
+    flex-direction: column;
     text-align: center;
     padding-top: 15px;
 }

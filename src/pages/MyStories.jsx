@@ -1,4 +1,4 @@
-import Navbar from "../components/Navbar/Navbar"
+import NavbarLogged from "../components/NavbarLogged/NavbarLogged"
 import "../pages/styles/styles-MyStories.css"
 import { StoryCard } from "../components/StoryCard/StoryCard"
 import { hookStories } from "../hooks/hookStories"
@@ -14,7 +14,7 @@ export const MyStories = () => {
 
     return (
         <>
-            <Navbar />
+            <NavbarLogged />
             <div className="div-historias">
                 <h1>Mis historias</h1>
                 {loadingStories ? <p>Cargando historias...</p> :

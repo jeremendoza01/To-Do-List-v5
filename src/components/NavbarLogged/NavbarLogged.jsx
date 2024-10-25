@@ -3,9 +3,9 @@ import { Link } from "react-router-dom"
 import { HiMenu } from "react-icons/hi";
 import { HiOutlineX } from "react-icons/hi";
 
-import "./styles.css"
+// import "../styles.css"
 
-function Navbar() {
+function NavbarLogged() {
 
     const [isSidebarOpen, setisSidebarOpen] = useState(false)
 
@@ -19,7 +19,6 @@ function Navbar() {
                 <div className="div-header">
                     <HiMenu className='icon-navbar' onClick={toggleSidebar} />
                     <h1 className='logo-navbar'>TASK TRACKER</h1>
-                    <Link to={"/login"} className='text-login'>Login</Link>
                 </div>
             </header>
             <div className={`sidebar ${isSidebarOpen ? 'open' : ''}`}>
@@ -47,4 +46,4 @@ function Navbar() {
 
     );
 }
-export default Navbar
+export default NavbarLogged

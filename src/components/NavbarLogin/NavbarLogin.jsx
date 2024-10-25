@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { HiOutlineHome } from "react-icons/hi";
 import { Link } from "react-router-dom"
-import "../styles/styles-navbarLogin.css"
 
+import "./styles.css"
 function NavbarLogin() {
 
     const [isSidebarOpen, setisSidebarOpen] = useState(false)
