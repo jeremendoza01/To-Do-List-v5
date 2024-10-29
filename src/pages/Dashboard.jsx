@@ -1,9 +1,16 @@
 import React from "react";
-import { useAuth } from "../auth/AuthProvider"
-import NavbarLogged from "../components/NavbarLogged/NavbarLogged"
-import "./styles/styles-Dashboard.css"
+import { useAuth } from "../auth/AuthProvider";
+import NavbarLogged from "../components/NavbarLogged/NavbarLogged";
+import LoadingScreen from "../components/LoadingScreen/LoadingScreen"; // Importa LoadingScreen
+import "./styles/styles-Dashboard.css";
+
 export const Dashboard = () => {
-    const { user } = useAuth()
+    const { user, isLoading } = useAuth(); // Usa isLoading desde el contexto de autenticación
+
+    if (isLoading) {
+        return <LoadingScreen />; // Muestra la pantalla de carga mientras isLoading esté activo
+    }
+
     return (
         <>
             <NavbarLogged />

@@ -8,6 +8,7 @@ export const MyProjects = () => {
 
     const { data: projects, loading: loadingProjects } = useFetchProjects();
 
+
     return (
         <>
             <NavbarLogged />
