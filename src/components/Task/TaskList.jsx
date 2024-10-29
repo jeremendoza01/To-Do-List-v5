@@ -1,20 +1,20 @@
-import React from 'react'
+import React from "react";
+import "./TaskList.css";
 
-import { TaskCard } from '../TaskCard/TaskCard';
-
-export const TaskList = ({ tasks }) => {
-    return tasks.length > 0 ? (
-        <div>
+export const TaskList = ({ tasks, onEditTask, onDeleteTask }) => {
+    return (
+        <div className="task-list-container">
             <ul>
-                {tasks.map((task) => (
-                    <TaskCard
-                        key={task._id}
-                        task={task}
-                    />
+                {tasks.map(task => (
+                    <li key={task._id} className="task-item">
+                        <span className="task-name">{task.name}</span>
+                        <div className="task-buttons">
+                            <button className="button-edit" onClick={() => onEditTask(task)}>Modificar</button>
+                            <button className="button-delete" onClick={() => onDeleteTask(task._id)}>Eliminar</button>
+                        </div>
+                    </li>
                 ))}
             </ul>
         </div>
-    ) : (
-        <p>Aun no hay tareas</p>
     );
-}
+};

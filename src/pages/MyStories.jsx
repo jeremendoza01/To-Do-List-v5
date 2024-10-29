@@ -18,7 +18,10 @@ export const MyStories = () => {
             <div className="div-historias">
                 <h1>Mis historias</h1>
                 {loadingStories ? <p>Cargando historias...</p> :
-                    stories.map(story => <StoryCard key={story._id} story={story} />)
+                    stories.map(story => <>
+                        <div className="div-storys"><StoryCard key={story._id} story={story} />
+                        </div>
+                    </>)
                 }
             </div>
         </>

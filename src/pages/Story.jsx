@@ -1,4 +1,4 @@
-import React, { useMemo } from "react";
+import React, { useMemo, useState } from "react";
 import { useParams } from "react-router-dom";
 import NavbarLogged from "../components/NavbarLogged/NavbarLogged";
 import { useFetchStoryById } from "../hooks/hookStoriesById";
@@ -14,7 +14,36 @@ export const Story = () => {
     const assignedToIds = useMemo(() => story?.assignedTo || [], [story]);
     const { data: owner, loading: loadingOwner } = useFetchUsersById(ownerId);
     const { data: assigned, loading: loadingAssigned } = useFetchUsersById(assignedToIds);
-    const { data: tasks, loading: loadingTasks } = useFetchTasksStory(storyId);
+    const { data: tasks, loading: loadingTasks, refetch: refetchTasks } = useFetchTasksStory(storyId);
+
+    const [selectedTask, setSelectedTask] = useState(null);
+
+    // agregar una tarea
+    const handleAddTask = () => {
+        //formulario para agregar la tarea
+        console.log("Agregar tarea");
+    };
+
+    //modificar una tarea
+    const handleEditTask = (task) => {
+        setSelectedTask(task);
+        //formulario para editar la tarea
+        console.log("Modificar tarea", task);
+    };
+
+    //eliminar una tarea
+    const handleDeleteTask = async (taskId) => {
+
+        if (window.confirm("¿Estás seguro de que deseas eliminar esta tarea?")) {
+            try {
+                await fetch(`${API_URL}/tasks/${taskId}`, { method: 'DELETE' });
+                refetchTasks();
+                console.log("Tarea eliminada");
+            } catch (error) {
+                console.error("Error al eliminar la tarea", error);
+            }
+        }
+    };
 
     return (
         <>
@@ -66,13 +95,17 @@ export const Story = () => {
                                 <p>Cargando tareas...</p>
                             ) : tasks && tasks.length > 0 ? (
                                 <>
-                                    <TaskList tasks={tasks} />
-                                    <button className="button-add-task">Agregar Tarea</button>
+                                    <TaskList
+                                        tasks={tasks}
+                                        onEditTask={handleEditTask} // Pasar la función para editar
+                                        onDeleteTask={handleDeleteTask} // Pasar la función para eliminar
+                                    />
+                                    <button className="button-add-task" onClick={handleAddTask}>Agregar Tarea</button>
                                 </>
                             ) : (
                                 <>
                                     <p>No hay tareas en esta historia</p>
-                                    <button className="button-add-task">Agregar Tarea</button>
+                                    <button className="button-add-task" onClick={handleAddTask}>Agregar Tarea</button>
                                 </>
                             )}
                         </div>
@@ -80,7 +113,7 @@ export const Story = () => {
                 ) : (
                     <p>Los datos de la historia no están disponibles</p>
                 )}
-            </div >
+            </div>
         </>
     );
 };

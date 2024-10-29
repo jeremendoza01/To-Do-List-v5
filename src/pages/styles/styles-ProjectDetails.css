@@ -40,8 +40,12 @@ h3 {
     margin-bottom: 20px;
 }
 
+.project-property {
+    font-weight: 600;
+    color: #333;
+}
+
 .div-property,
-.project-members,
 .project-epics {
     margin-top: 20px;
 }
@@ -52,18 +56,10 @@ h3 {
 
 .project-owner-name {
     color: #007bff;
+    font-size: 1em;
+    font-weight: 600;
 }
 
-/* Members list */
-.project-members ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.project-members ul li {
-    padding: 5px 0;
-    border-bottom: 1px solid #ccc;
-}
 
 /* Epics list */
 .project-epics ul {
@@ -104,6 +100,25 @@ h3 {
     font-size: 1.8em;
 }
 
+.project-members {
+    margin-top: 20px;
+}
+
 .h3-miembros {
-    font-size: 1.2em;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.member-list {
+    list-style: none;
+    padding: 0;
+}
+
+.member-item {
+    padding: 10px;
+    font-size: 1em;
+    font-weight: 600;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+    margin-bottom: 5px;
 }
