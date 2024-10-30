@@ -48,7 +48,7 @@ export const Story = () => {
     return (
         <>
             <NavbarLogged />
-            <div className="container">
+            <div className="container-story">
                 <h1 className="h1-detalles">Detalles de la historia</h1>
                 {loadingStory ? (
                     <p>Cargando detalles de la historia...</p>

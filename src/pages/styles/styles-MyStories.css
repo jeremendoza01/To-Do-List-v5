@@ -23,12 +23,21 @@
 /* Estilos para las tarjetas de historias */
 .story-card {
     margin: 10px 0;
+    display: flex;
+    flex-direction: column;
     padding: 15px;
     background-color: #fafafa;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.3s ease, transform 0.2s ease;
+    overflow: hidden;
+    /* Evita que el contenido sobresalga del div */
+    text-overflow: ellipsis;
+    /* Añade puntos suspensivos al final si el texto es demasiado largo */
+    white-space: normal;
+    /* Mantiene el texto en una sola línea */
 }
+
 
 .story-card:hover {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);

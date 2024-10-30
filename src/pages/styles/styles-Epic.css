@@ -8,7 +8,7 @@ body {
 }
 
 .container-epic {
-    max-width: 1100px;
+    max-width: 1300px;
     margin: 0 auto;
     padding: 30px;
     margin-bottom: 50px;
@@ -127,4 +127,10 @@ body {
 
 .h2-descripcion {
     font-size: 1.2em;
+}
+
+@media (max-width:1500px) {
+    .container-epic {
+        margin: 0px 30px;
+    }
 }

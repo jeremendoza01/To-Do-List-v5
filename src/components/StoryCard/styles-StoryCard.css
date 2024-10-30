@@ -10,6 +10,7 @@
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 35px 20px;
+    min-height: 140px;
     margin: 20px 0;
     transition: box-shadow 0.3s ease, transform 0.2s ease;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);

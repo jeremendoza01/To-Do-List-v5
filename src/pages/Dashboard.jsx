@@ -14,7 +14,7 @@ export const Dashboard = () => {
     return (
         <>
             <NavbarLogged />
-            <div className="container">
+            <div className="container-dashboard">
                 {user && <h1 className="h1-user">Hola, {user.name.first} {user.name.last}</h1>}
                 <p className="p">Esta pagina aun esta en proceso de desarrollo</p>
             </div>

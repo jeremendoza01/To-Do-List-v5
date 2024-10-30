@@ -12,7 +12,7 @@ export const MyProjects = () => {
     return (
         <>
             <NavbarLogged />
-            <div className="container">
+            <div className="container-proyects">
                 <h2 className="h2-projects">Mis Proyectos</h2>
                 <div className="div-projects">
                     {loadingProjects ? (

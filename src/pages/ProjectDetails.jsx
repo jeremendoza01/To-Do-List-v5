@@ -27,11 +27,11 @@ const ProjectDetails = () => {
                         <div>
                             <h2 className="project-name">{project.name} {project.icon}</h2>
                             <p className="project-description">{project.description}</p>
-                            <div className="div-property">
+                            <div className="div-property-proyect">
                                 <p className="project-property">Propietario:</p>
                                 {loadingOwner ? 'Cargando propietario...' :
                                     owner && owner.length > 0 && owner[0]?.name
-                                        ? <span className="project-owner-name">{owner[0].name.first} {owner[0].name.last}</span>
+                                        ? <h3 className="project-owner-name">{owner[0].name.first} {owner[0].name.last}</h3>
                                         : 'No se encontró al propietario'
                                 }
                             </div>

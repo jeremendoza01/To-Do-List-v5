@@ -70,7 +70,7 @@
 
 /* Títulos de las secciones */
 .section-title {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     text-align: center;
     /* Tamaño de fuente */
     color: #2dacc0;
@@ -81,7 +81,7 @@
 
 /* Información del perfil */
 .profile-info {
-    font-size: 1.2rem;
+    /* font-size: 1.5rem; */
     /* Tamaño de fuente */
     color: #333;
     /* Color del texto */
@@ -97,7 +97,7 @@
 
 /* Mensaje de cierre de sesión */
 .logout-prompt {
-    font-size: 1.4rem;
+    /* font-size: 1.4rem; */
     /* Tamaño de fuente */
     color: #333;
     /* Color rojo */
@@ -109,7 +109,7 @@
 .button.logout-button {
     padding: 0.75rem 1rem;
     /* Espaciado interno */
-    font-size: 1.2rem;
+    font-size: 1rem;
     /* Tamaño de fuente */
     color: #fff;
     /* Color del texto */
