@@ -35,7 +35,7 @@
 
 /* Título de la sección de configuración */
 .settings-title {
-    font-size: 2.5rem;
+    font-size: 1.8rem;
     /* Tamaño de fuente */
     text-align: center;
     /* Alineación centrada */
@@ -70,7 +70,7 @@
 
 /* Títulos de las secciones */
 .section-title {
-    font-size: 1.8rem;
+    font-size: 1.7rem;
     text-align: center;
     /* Tamaño de fuente */
     color: #2dacc0;
@@ -97,7 +97,7 @@
 
 /* Mensaje de cierre de sesión */
 .logout-prompt {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     /* Tamaño de fuente */
     color: #333;
     /* Color rojo */
@@ -107,7 +107,7 @@
 
 /* Estilos para el botón de cerrar sesión */
 .button.logout-button {
-    padding: 0.75rem 1.5rem;
+    padding: 0.75rem 1rem;
     /* Espaciado interno */
     font-size: 1.2rem;
     /* Tamaño de fuente */

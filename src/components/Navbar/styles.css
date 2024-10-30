@@ -96,6 +96,11 @@ body {
     margin-right: 10px;
     color: white;
     cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.close-btn:hover {
+    color: rgb(23, 162, 184);
 }
 
 .nav-sidebar {
@@ -150,7 +155,7 @@ ul {
 }
 
 .text-settings:hover {
-    color: #ffcc00;
+    color: rgb(23, 162, 184);
 }
 
 /* Navbar Icon */

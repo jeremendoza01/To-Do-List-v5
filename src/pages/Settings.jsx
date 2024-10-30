@@ -8,7 +8,7 @@ function Settings() {
         <>
             <NavbarLogged />
             <div className="settings-container">
-                <h1 className="settings-title">Settings</h1>
+                {/* <h1 className="settings-title">Settings</h1> */}
 
                 {/* User Profile Section */}
                 <div className="profile-section">
@@ -22,7 +22,6 @@ function Settings() {
 
                 {/* Logout Section */}
                 <div className="logout-section">
-                    <h2 className="logout-prompt">¿Cerrar sesión?</h2>
                     <button
                         type="button"
                         className="button logout-button"
