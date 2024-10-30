@@ -1,79 +1,187 @@
 /* LoginForm.css */
+body {
+    background-color: #f0f4f8;
+    /* Fondo suave para la página */
+    font-family: "Poppins", sans-serif;
+    /* Fuente moderna y limpia */
+    /* display: flex; */
+    /* Usar Flexbox para centrar el contenido */
+    /* justify-content: center; */
+    /* Centrar horizontalmente */
+    /* align-items: center; */
+    /* Centrar verticalmente */
+    /* height: 100vh; */
+    /* Altura completa de la vista */
+    /* margin: 0; */
+    /* Sin margen en el cuerpo */
+}
+
+/* Contenedor principal del formulario */
+.div-login {
+    display: flex;
+    justify-content: center;
+    /* Centrar el formulario */
+    align-items: center;
+    /* Alineación vertical centrada */
+    flex-direction: column;
+    /* Apilar elementos verticalmente */
+}
+
+/* El resto de tu CSS permanece igual */
+
 .form {
     display: flex;
+    margin-top: 10em;
     flex-direction: column;
-    width: 300px;
-    margin: 0 auto;
-    padding: 25px 0px;
-    align-items: center;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f9f9f9;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 12px 40px rgba(0, 0, 0, 0.15);
+    width: 400px;
+    /* Ancho del formulario */
+    padding: 60px;
+    /* Espaciado interno generoso */
+    border-radius: 15px;
+    /* Bordes redondeados */
+    background-color: #ffffff;
+    /* Fondo blanco */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    /* Sombra suave */
+    transition: box-shadow 0.3s ease;
+    /* Transición suave para la sombra */
 }
 
-.App-header {
-    background-color: #343a40;
-    padding: 10px 20px;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.div-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-}
-
-.h1-inicio {
-    font-size: 1.5em;
-}
-
-.div-login {
-    margin-top: 7em;
-}
-
-.input {
-    padding: 10px 10px;
-    width: 17em;
-    margin: 10px 0;
-    border-radius: 3px;
-    text-align: left;
-    border: 1px solid #ccc;
-}
-
-label {
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-.button-submit {
-    padding: 10px;
-    margin-top: 10px;
-    border-radius: 3px;
-    border: none;
-    background-color: #4CAA00;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-.error {
-    color: red;
-    margin-bottom: 15px;
-    font-size: 1.1em;
-}
-
-h2 {
-    text-align: center;
+/* Efecto de elevación al pasar el mouse */
+.form:hover {
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.15);
+    /* Efecto de sombra al pasar el mouse */
 }
 
 .div-usuario {
     display: flex;
     flex-direction: column;
+    align-items: start;
+}
+
+/* Estilo del título */
+.h1-inicio {
+    font-size: 2em;
+    /* Tamaño de fuente del título */
+    color: #333;
+    /* Color oscuro para el título */
     text-align: center;
-    padding-top: 15px;
+    /* Centrando el título */
+    margin-bottom: 20px;
+    /* Espaciado inferior */
+}
+
+/* Estilo de las etiquetas */
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+    /* Color más suave para las etiquetas */
+    text-align: center;
+    /* Centrando las etiquetas */
+}
+
+/* Estilo de los campos de entrada */
+.input {
+    padding: 12px;
+    /* Espaciado interno */
+    width: 100%;
+    /* Ancho completo */
+    margin: 10px 0;
+    border-radius: 8px;
+    /* Bordes redondeados */
+    border: 1px solid #ddd;
+    /* Borde suave */
+    font-size: 1rem;
+    /* Tamaño de fuente adecuado */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    /* Transiciones para el borde y la sombra */
+}
+
+/* Efecto de enfoque */
+.input:focus {
+    border-color: #007bff;
+    /* Color del borde al enfocar */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    /* Sombra al enfocar */
+    outline: none;
+    /* Sin contorno */
+}
+
+/* Estilo del mensaje de error */
+.error {
+    color: red;
+    /* Color rojo */
+    margin-bottom: 15px;
+    /* Espacio inferior */
+    font-size: 1.1em;
+    /* Tamaño de fuente adecuado */
+    text-align: center;
+    /* Centrando el mensaje de error */
+}
+
+/* Estilo del botón de envío */
+.button-submit {
+    padding: 12px;
+    /* Espaciado interno */
+    margin-top: 15px;
+    /* Espaciado superior */
+    border-radius: 8px;
+    /* Bordes redondeados */
+    border: none;
+    /* Sin borde */
+    background-color: #4CAF50;
+    /* Color verde atractivo */
+    color: white;
+    /* Color del texto */
+    font-size: 16px;
+    /* Tamaño de fuente */
+    cursor: pointer;
+    /* Cambia el cursor al pasar */
+    transition: background-color 1s ease, transform 1s;
+    /* Transiciones suaves */
+    width: 100%;
+    /* Ancho completo */
+}
+
+/* Efecto al pasar el mouse sobre el botón */
+.button-submit:hover {
+    background-color: #45a049;
+    /* Color más oscuro al pasar el mouse */
+    /* transform: translateY(-2px); */
+    /* Efecto de elevación al pasar */
+}
+
+/* Efecto de "clic" al presionar */
+.button-submit:active {
+    transform: scale(0.95);
+    /* Efecto de "clic" al presionar */
+}
+
+/* Encabezado de la aplicación */
+.App-header {
+    background-color: #343a40;
+    /* Color de fondo del encabezado */
+    padding: 10px 20px;
+    /* Espaciado interno */
+    color: white;
+    /* Color del texto */
+    display: flex;
+    /* Flexbox para disposición */
+    justify-content: space-between;
+    /* Espaciado entre elementos */
+    align-items: center;
+    /* Centrando verticalmente */
+}
+
+/* Contenedor del encabezado */
+.div-header {
+    display: flex;
+    /* Flexbox para disposición */
+    justify-content: space-between;
+    /* Espaciado entre elementos */
+    align-items: center;
+    /* Centrando verticalmente */
+    width: 100%;
+    /* Ancho completo */
 }

@@ -31,12 +31,37 @@ body {
 .text-login {
     font-size: 1rem;
     color: white;
+    /* Color del texto */
     text-decoration: none;
-    transition: color 0.3s ease;
+    /* Sin subrayado */
+    padding: 0.5rem 1rem;
+    /* Espaciado interno */
+    background-color: rgb(23, 162, 184);
+    /* Color de fondo atractivo */
+    border: none;
+    /* Sin borde */
+    border-radius: 5px;
+    /* Bordes redondeados */
+    cursor: pointer;
+    /* Cambia el cursor a puntero */
+    transition: background-color 0.3s ease, transform 0.2s;
+    /* Transiciones para fondo y transformación */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    /* Sombra suave */
 }
 
 .text-login:hover {
-    color: #00f7ff;
+    background-color: rgb(23, 162, 184);
+    /* Color de fondo al pasar el mouse */
+    transform: translateY(-1.5px);
+    /* Efecto de elevación en hover */
+}
+
+.text-login:active {
+    transform: scale(0.95);
+    /* Efecto de "clic" al presionar */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    /* Reducción de sombra al hacer clic */
 }
 
 /* Sidebar styles */
