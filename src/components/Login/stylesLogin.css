@@ -15,11 +15,11 @@
 
 .form {
     display: flex;
-    margin-top: 10em;
+    margin-top: 5em;
     flex-direction: column;
     /* width: 400px; */
     /* Ancho del formulario */
-    padding: 60px;
+    padding: 60px 80px;
     /* Espaciado interno generoso */
     border-radius: 15px;
     /* Bordes redondeados */
