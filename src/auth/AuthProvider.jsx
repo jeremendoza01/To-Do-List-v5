@@ -1,4 +1,4 @@
-import { useContext, createContext, useState } from "react";
+import { useContext, createContext, useState, useEffect } from "react";
 import { API_URL } from "../api";
 
 const AuthContext = createContext({
@@ -14,36 +14,48 @@ export const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null);
     const [isLoading, setIsLoading] = useState(false);
 
+
+
+    useEffect(() => {
+        // Recupera el token y los datos de usuario de localStorage al iniciar la app
+        const token = localStorage.getItem('authToken');
+        const storedUser = JSON.parse(localStorage.getItem('user'));
+
+        if (token && storedUser) {
+            setIsAuthenticated(true);
+            setUser(storedUser);
+        }
+        setIsLoading(false);
+    }, []);
+
     const login = async (username, password) => {
         setIsLoading(true)
         try {
-            const resp = await fetch(`${API_URL}/login`, {
+            const response = await fetch(`${API_URL}/login`, {
                 method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ username, password })
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ username, password }),
             });
 
-            const data = await resp.json();
+            if (!response.ok) throw new Error('Credenciales incorrectas');
 
-            if (data.success) {
-                localStorage.setItem('token', data.token);
-                setIsAuthenticated(true);
-                setUser(data.user);
-            } else {
-                throw new Error(data.message);
-            }
-        } catch (error) {
-            console.log('Error en la petición de login: ', error);
-            throw error;
-        } finally {
+            const { token, user } = await response.json();
+            localStorage.setItem('authToken', token);  // Guarda el token en localStorage
+            localStorage.setItem('user', JSON.stringify(user));  // Guarda los datos del usuario
+            setIsAuthenticated(true);
+            setUser(user);
+        } catch (err) {
+            throw new Error('Error al iniciar sesión');
+        }
+        finally {
             setIsLoading(false);
         }
     };
 
+
     const logout = () => {
-        localStorage.removeItem('token');
+        localStorage.removeItem('authToken');
+        localStorage.removeItem('user');
         setIsAuthenticated(false);
         setUser(null);
     };

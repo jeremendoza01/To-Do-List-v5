@@ -8,7 +8,7 @@ export const useFetchProjects = () => {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
-                auth: localStorage.getItem('token'),
+                auth: localStorage.getItem('authToken'),
             }
         });
         const { data } = await resp.json();

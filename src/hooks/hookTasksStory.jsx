@@ -14,7 +14,7 @@ export const useFetchTasksStory = (storyId) => {
             method: 'GET',
             headers: {
                 'Content-type': 'application/json',
-                auth: localStorage.getItem('token')
+                auth: localStorage.getItem('authToken')
             }
         })
 

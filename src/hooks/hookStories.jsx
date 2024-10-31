@@ -1,23 +1,27 @@
 import { useEffect, useState } from "react";
-import { API_URL } from "../api"
-export const hookStories = () => {
+import { API_URL } from "../api";
 
+export const hookStories = () => {
     const getStories = async () => {
-        const url = `${API_URL}/stories`
+        const url = `${API_URL}/stories`;
+
+
         const resp = await fetch(url, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
-                auth: localStorage.getItem('token')
+                auth: localStorage.getItem('authToken')
             }
-        })
+        });
 
-        const { data } = await resp.json()
-        return data;
-    }
+        if (!resp.ok) throw new Error('Error al obtener las historias');
+
+        const { data } = await resp.json();
+        return data || [];  // Asegura que data siempre sea un array
+    };
 
     const [state, setState] = useState({
-        data: [],
+        data: [],  // Data comienza como un array vacío
         loading: true
     });
 
@@ -27,7 +31,7 @@ export const hookStories = () => {
                 const stories = await getStories();
                 setState({ data: stories, loading: false });
             } catch (err) {
-                console.log(err);
+                console.error('Error en fetchStories:', err);
                 setState({ data: [], loading: false });
             }
         };
@@ -35,7 +39,7 @@ export const hookStories = () => {
         fetchStories();
     }, []);
 
-
     return state;
-}
+};
 
+export default hookStories;
