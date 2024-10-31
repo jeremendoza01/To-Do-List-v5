@@ -56,7 +56,7 @@ export const Story = () => {
                 return;
             }
 
-            console.log("Tarea agregada con éxito");
+            // console.log("Tarea agregada con éxito");
             setShowAddTaskForm(false);
             setNewTaskName("");
             setNewTaskDescription("");
@@ -72,7 +72,7 @@ export const Story = () => {
         setNewTaskName(task.name);
         setNewTaskDescription(task.description);
         setShowEditTaskForm(true);
-        console.log("Modificar tarea", task);
+        // console.log("Modificar tarea", task);
     };
 
     const handleUpdateTask = async (e) => {
@@ -100,7 +100,7 @@ export const Story = () => {
                 return;
             }
 
-            console.log("Tarea actualizada con éxito");
+            // console.log("Tarea actualizada con éxito");
             setShowEditTaskForm(false);
             setSelectedTask(null);
             setNewTaskName("");
@@ -130,7 +130,7 @@ export const Story = () => {
                 }
 
                 refetch();
-                console.log("Tarea eliminada");
+                // console.log("Tarea eliminada");
             } catch (error) {
                 console.error("Error al eliminar la tarea", error);
             }
