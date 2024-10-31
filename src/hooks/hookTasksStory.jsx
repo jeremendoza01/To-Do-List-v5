@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { API_URL } from "../api"
+import { API_URL } from "../api";
 
 export const useFetchTasksStory = (storyId) => {
     const [state, setState] = useState({
@@ -7,37 +7,33 @@ export const useFetchTasksStory = (storyId) => {
         loading: true,
     });
 
-    const getTaskStory = async (storyId) => {
-        const url = `${API_URL}/stories/${storyId}/tasks`
-
-        const resp = await fetch(url, {
-            method: 'GET',
-            headers: {
-                'Content-type': 'application/json',
-                auth: localStorage.getItem('authToken')
-            }
-        })
-
-        const { data } = await resp.json()
-        return data;
-    }
+    const fetchTasks = async () => {
+        setState({ data: [], loading: true }); // Resetear el estado antes de la carga
+        try {
+            const response = await fetch(`${API_URL}/stories/${storyId}/tasks`, {
+                method: 'GET',
+                headers: {
+                    'Content-type': 'application/json',
+                    auth: localStorage.getItem('authToken'),
+                },
+            });
+            const result = await response.json();
+            setState({ data: result.data || [], loading: false });
+        } catch (error) {
+            console.error("Error fetching tasks:", error);
+            setState({ data: [], loading: false });
+        }
+    };
 
     useEffect(() => {
-        getTaskStory(storyId)
-            .then(tasks => {
-                setState({
-                    data: tasks,
-                    loading: false
-                })
-            })
-            .catch((err) => {
-                console.log(err)
-                setState({
-                    data: [],
-                    loading: false
-                })
-            })
-    }, [])
+        if (storyId) {
+            fetchTasks(); // Llama a fetchTasks solo si storyId está definido
+        }
+    }, [storyId]);
 
-    return state;
+    return {
+        data: state.data,
+        loading: state.loading,
+        refetch: fetchTasks, // Proveer refetch para recargar las tareas
+    };
 };
