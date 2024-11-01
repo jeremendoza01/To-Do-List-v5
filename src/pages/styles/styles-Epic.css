@@ -17,6 +17,14 @@ body {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
+.h1-epica {
+    font-size: 1.7rem;
+}
+
+.h2-descripcion {
+    font-size: 1.4rem;
+}
+
 .div-epic {
     color: #17a2b8;
     /* color: #ffffff; */
@@ -29,16 +37,10 @@ body {
     align-items: center;
 }
 
-.div-epic h1 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    /* color: white; */
-}
-
 .div-name-epic h2 {
-    font-size: 1.5rem;
+    /* font-size: 1.5rem; */
     display: flex;
-    /* color: white; */
+
     text-align: center;
     margin-bottom: 10px;
 }
@@ -54,7 +56,7 @@ body {
 }
 
 .h3-historias {
-    font-size: 1.8rem;
+    font-size: 1.3rem;
     color: #17a2b8;
     border-bottom: 2px solid #17a2b8;
     padding-bottom: 10px;
@@ -121,13 +123,6 @@ body {
     list-style: none;
 }
 
-.h1-epica {
-    font-size: 1.5em;
-}
-
-.h2-descripcion {
-    font-size: 1.2em;
-}
 
 @media (max-width:1500px) {
     .container-epic {

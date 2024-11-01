@@ -12,7 +12,7 @@ const ProyectCard = ({ project }) => {
             <div className='div-projects-card'>
                 <Link to={`/my-projects/${project._id}`} className='link-project'>
                     <div className='card-project'>
-                        <h2>{project.name}</h2>
+                        <h2 className='name-proyect'>{project.name}</h2>
                     </div>
                 </Link>
             </div >

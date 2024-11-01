@@ -32,7 +32,7 @@ h3 {
 }
 
 .project-name {
-    font-size: 1.7rem;
+    font-size: 1.4rem;
     font-weight: bold;
     text-align: center;
 }
@@ -95,7 +95,7 @@ h3 {
 }
 
 .h1-detalles {
-    font-size: 1.8em;
+    font-size: 1.7em;
 }
 
 .project-members {
@@ -103,7 +103,9 @@ h3 {
 }
 
 .h3-miembros {
-    font-size: 1.3rem;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #17a2b8;
+    font-size: 1.2rem;
     margin-bottom: 10px;
 }
 
@@ -119,6 +121,12 @@ h3 {
     background-color: #f8f9fa;
     border-radius: 7px;
     margin-bottom: 5px;
+}
+
+.h3-epicas {
+    font-size: 1.2em;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #17a2b8;
 }
 
 @media (max-width:1500px) {

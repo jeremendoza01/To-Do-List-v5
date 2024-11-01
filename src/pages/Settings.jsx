@@ -4,12 +4,17 @@ import "./styles/styles-Settings.css";
 
 function Settings() {
     const { logout, user } = useAuth();
+
+    const handleLogout = () => {
+        if (window.confirm("¿Estás seguro de que deseas cerrar sesión?")) {
+            logout();
+        }
+    };
+
     return (
         <>
             <NavbarLogged />
             <div className="settings-container">
-                {/* <h1 className="settings-title">Settings</h1> */}
-
                 {/* User Profile Section */}
                 <div className="profile-section">
                     <h2 className="section-title">Perfil del Usuario</h2>
@@ -25,7 +30,7 @@ function Settings() {
                     <button
                         type="button"
                         className="button logout-button"
-                        onClick={logout}
+                        onClick={handleLogout}
                     >
                         Cerrar Sesión
                     </button>
