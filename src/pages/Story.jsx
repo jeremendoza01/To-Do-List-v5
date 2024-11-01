@@ -17,12 +17,9 @@ export const Story = () => {
     const { data: assigned, loading: loadingAssigned } = useFetchUsersById(assignedToIds);
     const { data: tasks, loading: loadingTasks, refetch } = useFetchTasksStory(storyId);
 
-    const [selectedTask, setSelectedTask] = useState(null);
     const [showAddTaskForm, setShowAddTaskForm] = useState(false);
     const [newTaskName, setNewTaskName] = useState("");
     const [newTaskDescription, setNewTaskDescription] = useState("");
-
-    const [showEditTaskForm, setShowEditTaskForm] = useState(false);
 
     const handleAddTask = async (e) => {
         e.preventDefault();
@@ -64,51 +61,6 @@ export const Story = () => {
 
         } catch (error) {
             console.error("Error en la solicitud de agregar tarea", error);
-        }
-    };
-
-    const handleEditTask = (task) => {
-        setSelectedTask(task);
-        setNewTaskName(task.name);
-        setNewTaskDescription(task.description);
-        setShowEditTaskForm(true);
-        // console.log("Modificar tarea", task);
-    };
-
-    const handleUpdateTask = async (e) => {
-        e.preventDefault();
-        if (!selectedTask) return;
-
-        const updatedTaskData = {
-            name: newTaskName,
-            description: newTaskDescription,
-        };
-
-        try {
-            const response = await fetch(`${API_URL}/tasks/${selectedTask._id}`, {
-                method: 'PUT',
-                headers: {
-                    'Content-type': 'application/json',
-                    auth: localStorage.getItem('authToken'),
-                },
-                body: JSON.stringify(updatedTaskData),
-            });
-
-            if (!response.ok) {
-                const errorData = await response.json();
-                console.error("Error al actualizar la tarea:", errorData);
-                return;
-            }
-
-            // console.log("Tarea actualizada con éxito");
-            setShowEditTaskForm(false);
-            setSelectedTask(null);
-            setNewTaskName("");
-            setNewTaskDescription("");
-            refetch();
-
-        } catch (error) {
-            console.error("Error en la solicitud de actualizar tarea", error);
         }
     };
 
@@ -181,13 +133,14 @@ export const Story = () => {
                                 )}
                             </div>
                         </div>
+                        {/* TAREAS */}
                         <div className="div-historia">
                             <h3 className="h3-historia">Tareas de la historia</h3>
                             {loadingTasks ? (
                                 <p>Cargando tareas...</p>
                             ) : tasks && tasks.length > 0 ? (
                                 <>
-                                    <TaskList tasks={tasks} onEditTask={handleEditTask} onDeleteTask={handleDeleteTask} />
+                                    <TaskList tasks={tasks} onDeleteTask={handleDeleteTask} />
                                     <button className="button-add-task" onClick={() => setShowAddTaskForm(true)}>Agregar Tarea</button>
                                 </>
                             ) : (
@@ -198,7 +151,7 @@ export const Story = () => {
                             )}
                         </div>
 
-
+                        {/* FORM AGREGAR TAREA */}
                         {showAddTaskForm && (
                             <form onSubmit={handleAddTask} className="form-add-task">
                                 <h3 className="h3-addtask">Agregar Nueva Tarea</h3>
@@ -224,30 +177,6 @@ export const Story = () => {
                             </form>
                         )}
 
-                        {showEditTaskForm && (
-                            <form onSubmit={handleUpdateTask} className="form-edit-task">
-                                <h3 className="h3-edittask">Editar Tarea</h3>
-                                <input
-                                    className="input-edittask"
-                                    type="text"
-                                    placeholder="Nombre de la tarea"
-                                    value={newTaskName}
-                                    onChange={(e) => setNewTaskName(e.target.value)}
-                                    required
-                                />
-                                <input
-                                    className="description-edittask"
-                                    placeholder="Descripción de la tarea"
-                                    value={newTaskDescription}
-                                    onChange={(e) => setNewTaskDescription(e.target.value)}
-                                    required
-                                />
-                                <div className="div-btn-edit-task">
-                                    <button type="submit" className="button-submit-edit-task">Guardar Cambios</button>
-                                    <button type="button" onClick={() => setShowEditTaskForm(false)} className="button-cancel-edit-task">Cancelar</button>
-                                </div>
-                            </form>
-                        )}
                     </div>
                 ) : (
                     <p>Los datos de la historia no están disponibles</p>
