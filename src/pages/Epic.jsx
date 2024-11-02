@@ -28,12 +28,16 @@ export const Epic = () => {
                     <h3 className="h3-historias">Historias:</h3>
                     {loadingStories ? (
                         <p>Cargando historias...</p>
-                    ) : (
+                    ) : (storiesData.length > 0 ? (
                         <ul className="link-story">
                             {storiesData.map(story => (
                                 <StoryCard key={story._id} story={story} epicId={epicId} projectId={projectId} />
                             ))}
                         </ul>
+                    ) : (
+                        <p>No hay historias disponibles.</p>
+                    )
+
                     )}
                 </div>
             </div>

@@ -73,6 +73,10 @@ ul li {
     font-size: 1.1em;
 }
 
+.text-propietario {
+    margin-bottom: 10px;
+}
+
 .button-add-task {
     font-family: "Noto Sans", sans-serif;
     background-color: #17a2b8;
