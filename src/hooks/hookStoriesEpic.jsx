@@ -14,7 +14,7 @@ export const useFetchStoriesEpic = (epicId) => {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
-                auth: localStorage.getItem('authToken'),
+                Authorization: `Bearer ${localStorage.getItem('authToken')}`,
             }
         })
 
@@ -24,21 +24,25 @@ export const useFetchStoriesEpic = (epicId) => {
 
 
     useEffect(() => {
+        if (!epicId) {
+            console.error("No epicId provided!");
+            return; // Termina early si no se proporciona epicId
+        }
         getStoriesEpic(epicId)
             .then(epics => {
                 setState({
                     data: epics,
                     loading: false
-                })
+                });
             })
             .catch((err) => {
-                console.log(err)
+                console.error("Error fetching stories:", err);
                 setState({
                     data: [],
                     loading: false
-                })
-            })
-    }, [])
+                });
+            });
+    }, [epicId]);
 
     return state;
 }

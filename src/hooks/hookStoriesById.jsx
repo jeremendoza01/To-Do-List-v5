@@ -13,7 +13,7 @@ export const useFetchStoryById = (idStory) => {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
-                auth: localStorage.getItem('authToken')
+                Authorization: `Bearer ${localStorage.getItem('authToken')}`,
             }
         })
 
