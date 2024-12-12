@@ -37,18 +37,14 @@ body {
     align-items: center;
 }
 
-.div-name-epic h2 {
-    /* font-size: 1.5rem; */
-    display: flex;
-
+.div-name-epic {
     text-align: center;
-    margin-bottom: 10px;
 }
 
 .div-name-epic p {
     font-size: 1.1rem;
     line-height: 1.6;
-    /* color: white; */
+
 }
 
 .div-stories {
