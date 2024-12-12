@@ -8,7 +8,7 @@ export const useFetchEpics = (projectId) => {
         const resp = await fetch(url, {
             headers: {
                 'Content-Type': 'application/json',
-                Authorization: `Bearer ${localStorage.getItem('authToken')}`,
+                auth: localStorage.getItem('authToken'),
             }
         });
 

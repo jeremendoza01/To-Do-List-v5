@@ -7,7 +7,7 @@ export const useFetchUsersById = (usersIds) => {
         const resp = await fetch(url, {
             headers: {
                 'Content-type': 'application/json',
-                Authorization: `Bearer ${localStorage.getItem('authToken')}`,
+                auth: localStorage.getItem('authToken'),
             }
         });
 

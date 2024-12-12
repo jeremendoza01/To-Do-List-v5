@@ -9,7 +9,7 @@ export const useFetchProjectsById = (projectId) => {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
-                Authorization: `Bearer ${localStorage.getItem('authToken')}`,
+                auth: localStorage.getItem('authToken'),
             }
         });
 

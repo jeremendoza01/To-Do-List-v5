@@ -3,7 +3,6 @@ import { API_URL } from "../api";
 
 export const useFetchTasksStory = (storyId) => {
     const url = `${API_URL}/stories/${storyId}/tasks`;
-    // console.log('Fetching tasks from URL:', url); // Debug
     const [state, setState] = useState({
         data: [],
         loading: true,
@@ -11,7 +10,6 @@ export const useFetchTasksStory = (storyId) => {
 
     useEffect(() => {
         if (storyId) {
-            console.log('Fetching tasks for storyId:', storyId); // Agregar mensaje de depuración
             fetchTasks();
         } else {
             console.warn('No storyId provided.');
@@ -26,7 +24,7 @@ export const useFetchTasksStory = (storyId) => {
                 method: 'GET',
                 headers: {
                     'Content-type': 'application/json',
-                    Authorization: `Bearer ${localStorage.getItem('authToken')}`,
+                    auth: localStorage.getItem('authToken'),
                 },
             });
 

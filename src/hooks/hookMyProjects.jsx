@@ -18,7 +18,7 @@ export const useFetchProjects = () => {
                     method: 'GET',
                     headers: {
                         'Content-Type': 'application/json',
-                        Authorization: `Bearer ${token}`,
+                        auth: localStorage.getItem('authToken'),
                     },
                 });
 
