@@ -19,7 +19,7 @@ function Settings() {
                 <div className="profile-section">
                     <h2 className="section-title">Perfil del Usuario</h2>
                     <div className="profile-info">
-                        <p><strong>Nombre:</strong> {user.name.first} {user.name.last}</p>
+                        <p><strong>Nombre:</strong> {user.username}</p>
                         <p><strong>Username:</strong> {user.username}</p>
                         <p><strong>Email:</strong> {user.email}</p>
                     </div>
